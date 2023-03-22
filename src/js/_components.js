@@ -1,1 +1,6 @@
-console.log('components');
+import './components/drop';
+
+
+
+
+
