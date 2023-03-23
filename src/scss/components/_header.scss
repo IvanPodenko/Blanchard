@@ -1,4 +1,138 @@
+.header {
+  &__top {
+    background-color: var(--black);
 
+    &-container {
+      display: flex;
+      // justify-content: space-between;
+      min-height: 100px;
+    }
+
+    &-link {
+      padding-top: 30px;
+      padding-right: 181px;
+    }
+
+    &-nav {
+      padding-top: 37px;
+      padding-right: 427px;
+
+      &-list {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &-item:not(:last-child) {
+        padding-right: 68px;
+      }
+
+      &-link {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+        color: var(--white);
+      }
+    }
+
+    &-btn {
+      display: flex;
+      align-items: center;
+      color: var(--white);
+
+      &-link {
+        margin-right: 7px;
+      }
+
+      &-heading {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: var(--white);
+      }
+    }
+  }
+
+  &__bottom {
+
+    background-color:rgba(0, 0, 0, 0.5);;
+
+    &-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 70px;
+    }
+
+    &-list {
+      display: flex;
+    }
+
+    &-item:not(:last-child) {
+      padding-right: 97px;
+    }
+
+    &-btn {
+
+      &-heading {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: var(--white);
+      }
+    }
+
+    &-drop {
+
+      &-wrap {
+
+        &-link {
+          font-family: 'Open Sans';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 19px;
+          color: var(--white);
+        }
+      }
+    }
+
+  }
+
+  &__search {
+
+    &-btn {
+
+      &-img {
+        width: 20px;
+        height: 20px;
+        fill: var(--white);
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+
+    &-input{
+      border-bottom: 1px solid var(--white);
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+      color: rgba(255, 255, 255, 0.85);
+      background-color: transparent;
+    }
+  }
+
+
+}
 
 
 
