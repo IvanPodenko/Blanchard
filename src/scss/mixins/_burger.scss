@@ -8,9 +8,11 @@
   position: relative;
   border: none;
   padding: 0;
-  width: var(--burger-width);
-  height: var(--burger-height);
-  color: #000;
+  margin-top: 36px;
+  margin-left: 50px;
+  width: 36px;
+  height: 28px;
+  color: var(--white);
   background-color: transparent;
   cursor: pointer;
 
@@ -26,18 +28,20 @@
   }
 
   &::before {
+    width: 36px;
     top: 0;
   }
 
   &::after {
     top: calc(100% - var(--burger-line-height));
+    width: 24px;
   }
 
   &__line {
     position: absolute;
     left: 0;
     top: 50%;
-    width: 100%;
+    width: 28px;
     height: var(--burger-line-height);
     background-color: currentColor;
     transform: translateY(-50%);
@@ -46,12 +50,14 @@
 
   &--active {
     &::before {
+      width: 37px;
       top: 50%;
       transform: rotate(45deg);
       transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
     }
 
     &::after {
+      width: 37px;
       top: 50%;
       transform: rotate(-45deg);
       transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
