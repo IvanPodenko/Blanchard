@@ -1,4 +1,9 @@
+.burger { @include burger };
+
 .header {
+
+
+
   &__top {
     background-color: var(--black);
 
@@ -13,7 +18,7 @@
 
       @include tablet {
         position: absolute;
-        left: 41%;
+        left: 40%;
       }
     }
 
@@ -24,19 +29,36 @@
         position: absolute;
         top: 0;
         left: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: space-between;
         height: 100vh;
         width: 100%;
         opacity: 0;
         visibility: hidden;
       }
 
+      &.menu--active {
+        position: relative;
+        top: 0;
+        left: -3%;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        opacity: 1;
+        visibility: visible;
+        // transform: translateY(0);
+        overflow-y: auto;
+      }
 
       &-list {
         display: flex;
         justify-content: space-between;
+
+        @include tablet {
+          display: flex;
+          flex-direction: column;
+          padding-top: 10%;
+        }
       }
 
       &-item:not(:last-child) {
@@ -51,28 +73,28 @@
         line-height: 25px;
         color: var(--white);
       }
-    }
 
-    &-btn {
-      display: flex;
-      align-items: center;
-      color: var(--white);
-
-      @include tablet {
-        display: none;
-      }
-
-      &-link {
-        margin-right: 7px;
-      }
-
-      &-heading {
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 25px;
+      &-btn {
+        display: flex;
+        align-items: center;
         color: var(--white);
+
+        @include tablet {
+          display: none;
+        }
+
+        &-link {
+          margin-right: 7px;
+        }
+
+        &-heading {
+          font-family: 'Open Sans';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 25px;
+          color: var(--white);
+        }
       }
     }
   }
@@ -127,10 +149,33 @@
         }
       }
     }
-
   }
 
+
+  // ФОРМЫ ПОИСКА ПО САЙТУ
+
+
   &__search {
+
+    &-top {
+      display: none;
+
+      @include tablet {
+        display: block;
+      }
+
+      &-btn {
+
+
+        &-img {
+          width: 30px;
+          height: 30px;
+          margin-top: 36px;
+          margin-right: 49px;
+          fill: var(--white);
+        }
+      }
+    }
 
     &-btn {
 
@@ -156,18 +201,10 @@
       background-color: transparent;
     }
   }
-
-
 }
 
-.burger { @include burger };
 
-  //  .menu--active {
-  //     opacity: 1;
-  //     visibility: visible;
-  //     transform: translateY(0);
-  //     overflow-y: auto;
-  // }
+
 
 
 

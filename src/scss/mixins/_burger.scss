@@ -49,6 +49,9 @@
   }
 
   &--active {
+
+    z-index: 100;
+
     &::before {
       width: 37px;
       top: 50%;
