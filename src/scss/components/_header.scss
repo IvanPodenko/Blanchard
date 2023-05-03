@@ -1,5 +1,9 @@
 .burger { @include burger};
 
+.simplebar-content-wrapper {
+  overflow: auto;
+}
+
 .header {
 
 
@@ -286,6 +290,7 @@
 
     &-drop {
 
+
       position: absolute;
       bottom: 0;
       left: 0;
@@ -294,20 +299,22 @@
       background-color: rgba(0, 0, 0, 0.6);
       transform: translateY(100%);
 
-      &.simplebar-track.simplebar-vertical {
+      & .simplebar-track.simplebar-vertical{
         width: 2px;
         background-color: #000;
-
-        &.simplebar-track.simplebar-vertical
-        .simplebar-scrollbar:before {
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          background-color: #fff;
-          opacity: 1;
-        }
       }
+
+      
+      .simplebar-track.simplebar-vertical
+      .simplebar-scrollbar:before {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        opacity: 1;
+      }
+
 
       &.is-active {
         display: block;
@@ -323,11 +330,10 @@
 
       &-wrap {
 
-        overflow-y: auto;
-        // width: 240px;
+        width: 240px;
         max-height: 220px;
 
-        &.simplebar-wrapper {
+        & .simplebar-wrapper {
           overflow: visible;
         }
 
@@ -380,6 +386,10 @@
 
           &:active::before{
             opacity: 1;
+          }
+
+          &--tintoretto {
+            background-image: url(../img/tintoretto.jpg);
           }
         }
       }
