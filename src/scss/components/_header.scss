@@ -215,19 +215,15 @@
 
     &-list {
       display: flex;
+      justify-content: space-between;
+      width: 70%;
     }
 
     &-item {
       position: relative;
       color: gray;
-      margin-right: 30px;
-      padding-top: 20px;
       padding-bottom: 20px;
       list-style: none;
-    }
-
-    &-item:not(:last-child) {
-      padding-right: 97px;
     }
 
     &-btn {
@@ -292,7 +288,7 @@
 
 
       position: absolute;
-      bottom: 0;
+      bottom: 1px;
       left: 0;
       display: none;
       padding: 40px 20px 40px 40px;
@@ -304,8 +300,7 @@
         background-color: #000;
       }
 
-      
-      .simplebar-track.simplebar-vertical
+      & .simplebar-track.simplebar-vertical
       .simplebar-scrollbar:before {
         top: 0;
         bottom: 0;
@@ -314,7 +309,6 @@
         background-color: #fff;
         opacity: 1;
       }
-
 
       &.is-active {
         display: block;
@@ -331,7 +325,7 @@
       &-wrap {
 
         width: 240px;
-        max-height: 220px;
+        max-height: 225px;
 
         & .simplebar-wrapper {
           overflow: visible;
@@ -389,7 +383,83 @@
           }
 
           &--tintoretto {
-            background-image: url(../img/tintoretto.jpg);
+            background-image: url("../img/tintoretto.webp");
+          }
+
+          &--fridrih {
+            background-image: url("../img/fridrih.webp");
+          }
+
+          &--leonardo {
+            background-image: url("../img/leonardo.webp");
+          }
+
+          &--verokko {
+            background-image: url("../img/verokko.webp");
+          }
+
+          &--mone {
+            background-image: url("../img/mone.webp");
+          }
+
+          &--sisley{
+            background-image: url("../img/sisley.webp");
+          }
+
+          &--mane {
+            background-image: url("../img/mane.webp");
+          }
+
+          &--renyar {
+            background-image: url("../img/renyar.webp");
+          }
+
+          &--vangog {
+            background-image: url("../img/vangog.webp");
+          }
+
+          &--sezan{
+            background-image: url("../img/sezan.webp");
+          }
+
+          &--gogen {
+            background-image: url("../img/gogen.webp");
+          }
+
+          &--sera {
+            background-image: url("../img/sera.webp");
+          }
+
+          &--kandinskiy {
+            background-image: url("../img/kandinskiy.webp");
+          }
+
+          &--marinetti {
+            background-image: url("../img/marinetti.webp");
+          }
+
+          &--malevich {
+            background-image: url("../img/malevich.webp");
+          }
+
+          &--picasso {
+            background-image: url("../img/picasso.webp");
+          }
+
+          &--kappa {
+            background-image: url("../img/kappa.webp");
+          }
+
+          &--pratella {
+            background-image: url("../img/pratella.webp");
+          }
+
+          &--severini {
+            background-image: url("../img/severini.webp");
+          }
+
+          &--balla {
+            background-image: url("../img/balla.webp");
           }
         }
       }
@@ -480,6 +550,8 @@
     }
 
     &-input{
+      outline: none;
+      color: white;
       border-bottom: 1px solid var(--white);
       background-color: transparent;
     }

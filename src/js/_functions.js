@@ -41,7 +41,9 @@ import { burger } from './functions/burger';
 // import { getHeaderHeight } from './functions/header-height';
 
 // Подключение плагина кастом-скролла
-import 'simplebar';
+  //
+  import 'simplebar';
+
 
 // Подключение плагина для позиционирования тултипов
 // import { createPopper, right} from '@popperjs/core';
