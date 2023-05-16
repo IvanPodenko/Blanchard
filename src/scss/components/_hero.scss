@@ -1,6 +1,70 @@
-.test {
-  height: 1400px;
-  // background-color: red;
+.hero {
+
+    position: relative;
+    top: 0px;
+    height: 800px;
+    background-image: url("../img/slider1.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 90px;
+
+    &__content {
+
+      position: absolute;
+      top: 18%;
+      max-width: 597px;
+      padding-bottom: 133px;
+
+    &__title {
+
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 72px;
+      line-height: 98px;
+      color: var(--white);
+      margin-bottom: 0;
+
+
+      &-hidden {
+        display: none;
+      }
+    }
+
+    &__text {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 30px;
+      color: var(--white);
+      margin-top: 0;
+      margin-bottom: 92px;
+      width: 456px;
+    }
+
+    &__btn {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 25px;
+      text-align: center;
+      color: var(--white);
+      border-radius: 100px;
+      background: var(--amethyst);
+      padding: 22px 35px;
+    }
+  }
+
+
+
+
+
+
 }
+
+
+
 
 

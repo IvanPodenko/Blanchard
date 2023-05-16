@@ -182,23 +182,14 @@
     }
   }
 
-  // &__enter {
-
-  //   &-wrap {
-  //     // padding-bottom: 50px;
-  //   }
-  // }
-
-  // &__nav {
-
-  //   &-wrap {
-  //     // margin-top: 76px;
-  //   }
-  // }
 
   &__bottom {
 
-    background-color:rgba(0, 0, 0, 0.5);;
+    position: absolute;
+    right: 0;
+    left: 0;
+    background-color:rgba(0, 0, 0, 0.5);
+    z-index: 1;
 
     @include tablet {
 
@@ -383,7 +374,7 @@
           }
 
           &--tintoretto {
-            background-image: url("../img/tintoretto.webp");
+            background-image: url("../img/tintoretto.jpg");
           }
 
           &--fridrih {
