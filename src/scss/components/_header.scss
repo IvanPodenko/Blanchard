@@ -95,7 +95,7 @@
         background-color: rgba(0, 0, 0, 0.9);
         opacity: 1;
         visibility: visible;
-        // transform: translateY(0);
+        transform: translateY(0%);
         // overflow-y: auto;
 
         @include tablet {
@@ -189,7 +189,7 @@
     right: 0;
     left: 0;
     background-color:rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    z-index: 3;
 
     @include tablet {
 
@@ -316,7 +316,7 @@
       &-wrap {
 
         width: 240px;
-        max-height: 225px;
+        max-height: 240px;
 
         & .simplebar-wrapper {
           overflow: visible;
@@ -374,7 +374,7 @@
           }
 
           &--tintoretto {
-            background-image: url("../img/tintoretto.jpg");
+            background-image: url("../img/tintoretto.webp");
           }
 
           &--fridrih {
