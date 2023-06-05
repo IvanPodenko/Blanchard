@@ -1,0 +1,36 @@
+.gallery {
+
+  margin-bottom: 40px;
+  min-height: 595px;
+  background-image: url("../img/gallery-fon1.jpg");
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  &__left {
+    width: 40%;
+    margin-right: 50px;
+    margin-top: 80px;
+  }
+
+  &__title {
+    color: var(--white);
+  }
+
+  &__right {
+    margin-top: 80px;
+  }
+
+  &__image {
+    width: 350px;
+    height: 350px;
+  }
+
+}
+
+
+
+
