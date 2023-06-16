@@ -3,10 +3,40 @@
 
 
     <div class="gallery__left">
-      <h2 class="gallery__title">
-        Галерея
-      </h2>
-      <span class="gallery__filter">Фильтр:</span>
+      <h2 class="gallery__title"> Галерея </h2>
+
+
+      <h3 class="gallery__filter">Фильтр:</h3>
+      
+        <select class="gallery__drop js-choice" name="art" id="">
+          <option class="gallery__drop-list" value="Живопись">Живопись</option>
+          <option class="gallery__drop-list" value="Скульптура">Скульптура</option>
+          <option class="gallery__drop-list" value="Рисунок">Рисунок</option>
+        </select>
+
+
+
+     <div class="gallery__checkbox">
+
+      <label class="gallery__custom-checkbox">
+        <input type="checkbox" class="visually-hidden gallery__custom-checkbox--field">
+        <span class="gallery__custom-checkbox--content">XIX Век</span>
+      </label>
+
+      <label class="gallery__custom-checkbox">
+        <input type="checkbox" class=" visually-hidden gallery__custom-checkbox--field">
+        <span class="gallery__custom-checkbox--content">XX Век</span>
+      </label>
+
+      <label class="gallery__custom-checkbox">
+        <input type="checkbox" class="visually-hidden gallery__custom-checkbox--field">
+        <span class="gallery__custom-checkbox--content">Современность</span>
+      </label>
+
+     </div>
+
+
+
 
       <!-- далее дроп и чекбоксы -->
     </div>
@@ -15,24 +45,24 @@
 
       <div class="swiper gallery__swiper">
         <div class="swiper-wrapper">
-           <div class="swiper-slide">
+           <a class="swiper-slide swiper-gallery" href="#">
             <img loading="lazy" src="..//img/gallery-slider.jpg" class="gallery__image" width="350" height="350" alt="">
-           </div>
-           <div class="swiper-slide">
+           </a>
+           <a class="swiper-slide swiper-gallery" href="#">
             <img loading="lazy" src="..//img/gallery-slider1.jpg" class="gallery__image" width="350" height="350" alt="">
-           </div>
-           <div class="swiper-slide">
+           </a>
+           <a class="swiper-slide swiper-gallery" href="#">
             <img loading="lazy" src="..//img/gallery-slider2.jpg" class="gallery__image" width="350" height="350" alt="">
-           </div>
-           <div class="swiper-slide">
+           </a>
+           <a class="swiper-slide swiper-gallery" href="#">
             <img loading="lazy" src="..//img/gallery-slider3.jpg" class="gallery__image" width="350" height="350" alt="">
-           </div>
-           <div class="swiper-slide">
+           </a>
+           <a class="swiper-slide swiper-gallery" href="#">
             <img loading="lazy" src="..//img/gallery-slider4.jpg" class="gallery__image" width="350" height="350" alt="">
-           </div>
-           <div class="swiper-slide">
+           </a>
+           <a class="swiper-slide swiper-gallery" href="#">
             <img loading="lazy" src="..//img/gallery-slider5.jpg" class="gallery__image" width="350" height="350" alt="">
-           </div>
+           </a>
         </div>
       </div>
 
