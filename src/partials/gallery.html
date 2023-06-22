@@ -7,7 +7,7 @@
 
 
       <h3 class="gallery__filter">Фильтр:</h3>
-      
+
         <select class="gallery__drop js-choice" name="art" id="">
           <option class="gallery__drop-list" value="Живопись">Живопись</option>
           <option class="gallery__drop-list" value="Скульптура">Скульптура</option>
@@ -20,28 +20,35 @@
 
       <label class="gallery__custom-checkbox">
         <input type="checkbox" class="visually-hidden gallery__custom-checkbox--field">
+        <span class="gallery__custom-checkbox--visible"></span>
         <span class="gallery__custom-checkbox--content">XIX Век</span>
       </label>
 
       <label class="gallery__custom-checkbox">
         <input type="checkbox" class=" visually-hidden gallery__custom-checkbox--field">
+        <span class="gallery__custom-checkbox--visible"></span>
         <span class="gallery__custom-checkbox--content">XX Век</span>
       </label>
 
       <label class="gallery__custom-checkbox">
         <input type="checkbox" class="visually-hidden gallery__custom-checkbox--field">
+        <span class="gallery__custom-checkbox--visible"></span>
         <span class="gallery__custom-checkbox--content">Современность</span>
       </label>
 
      </div>
-
-
-
-
-      <!-- далее дроп и чекбоксы -->
     </div>
 
     <div class="gallery__right">
+
+      <div class="gallery__right-navigation">
+        <button class="gallery__right-btn btn-prev  btn-reset" aria-label="К предыдущему слайду"></button>
+        <div class="gallery__right-pagination">
+          <span class="pagination-current">1 /</span>
+          <span class="pagination-total">6</span>
+        </div>
+        <button class="gallery__right-btn btn-next btn-reset" aria-label="К следующему слайду"></button>
+      </div>
 
       <div class="swiper gallery__swiper">
         <div class="swiper-wrapper">
