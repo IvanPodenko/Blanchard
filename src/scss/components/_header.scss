@@ -126,21 +126,28 @@
         }
       }
 
-      &-item:not(:last-child) {
+      &-item {
+
+      &:not(:last-child) {
         padding-right: 68px;
 
-        @include mobile {
-          padding-bottom: 5px;
+          @include mobile {
+            padding-bottom: 5px;
+          }
         }
       }
 
       &-link {
+        position: relative;
         font-family: 'Open Sans';
         font-style: normal;
         font-weight: 600;
         font-size: 18px;
         line-height: 25px;
         color: var(--white);
+        z-index: 1;
+        transition: color .3s ease-in-out;
+        outline: none;
 
         @include tablet {
         font-size: 24px;
@@ -152,14 +159,43 @@
         font-size: 16px;
         line-height: 32px;
         }
+
+        &:focus-visible:not(:hover):not(:active)::after {
+          content: "";
+          position:absolute;
+          left: -7px;
+          top: -3px;
+          bottom: -3px;
+          width: calc(100% + 14px);
+          background-color: var(--studio);
+          z-index: -1;
+          outline: none;
+        }
+
+        &:hover {
+          color: var(--wisteria);
+        }
+
+        &:active{
+          color: var(--studio);
+        }
+
       }
+
 
     }
 
     &-btn {
+      // display: inline-block;
       display: flex;
-      align-items: center;
+      align-items: baseline;
       color: var(--white);
+      // transition: color .3s ease-in-out;
+
+      &:hover .header__top-btn-wrap {
+        margin-left: -4px;
+        padding-left: 4px;
+      }
 
       @include tablet {
         // display: none;
@@ -170,8 +206,17 @@
         background: transparent;
       }
 
+      &-wrap {
+        display: inline-block;
+        overflow: hidden;
+        vertical-align: middle;
+        transition-property: margin-left, padding-left;
+        transition-duration: .3s;
+      }
+
       &-link {
-        margin-right: 7px;
+        fill: var(--white);
+        margin-left: -4px;
       }
 
       &-heading {
@@ -181,7 +226,14 @@
         font-size: 18px;
         line-height: 25px;
         color: var(--white);
+        padding-left: 7px;
+        transition: color .3s ease-in-out;
+
+        &:hover {
+          color: var(--wisteria);
+        }
       }
+
     }
   }
 
@@ -234,6 +286,7 @@
       color: gray;
       transition: color 0.2s ease-in-out;
       cursor: pointer;
+      transition: color .3s ease-in-out;
 
       &:hover,
       &:focus {
@@ -274,6 +327,22 @@
         line-height: 25px;
         color: var(--white);
       }
+
+
+
+      &:hover {
+        color: var(--wisteria);
+      }
+
+      &:active{
+        color: var(--studio);
+      }
+
+
+      // &:focus{
+
+      //   outline: none;
+      // }
     }
 
 
