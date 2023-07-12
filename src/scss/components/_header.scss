@@ -33,6 +33,9 @@
 
     &-link {
 
+      outline: none;
+
+
       @include tablet {
         & {
           // margin-right: 10%;
@@ -53,7 +56,7 @@
       @include small-mobile {
         & {
           width: 107px;
-          // height: 11px;
+
         }
       }
 
@@ -61,7 +64,7 @@
 
     &-image {
 
-      @include small-mobile {
+        @include small-mobile {
         width: 108px;
         height: 25px;
       }
@@ -71,7 +74,7 @@
       display: contents;
       align-items: center;
       justify-content: space-between;
-      // padding-top: 37px;
+
 
       @include tablet {
         & {
@@ -79,8 +82,6 @@
           top: 0;
           left: 0;
           display: flex;
-          // flex-direction: column;
-          // justify-content: space-between;
           height: 100vh;
           width: 100%;
           opacity: 0;
@@ -98,10 +99,9 @@
         z-index: 10;
         visibility: visible;
         transform: translateY(0%);
-        // overflow-y: auto;
+
 
         @include tablet {
-          // justify-content: space-between;
           align-items: flex-start;
         }
       }
@@ -170,6 +170,7 @@
           background-color: var(--studio);
           z-index: -1;
           outline: none;
+          animation:scale-up-center .4s cubic-bezier(.39,.575,.565,1.000) both
         }
 
         &:hover {
@@ -179,26 +180,50 @@
         &:active{
           color: var(--studio);
         }
-
       }
 
+      @keyframes scale-up-center{0%{transform:scale(.5)}100%{transform:scale(1)}}
 
     }
 
     &-btn {
-      // display: inline-block;
+      position: relative;
       display: flex;
       align-items: baseline;
       color: var(--white);
-      // transition: color .3s ease-in-out;
+      transition: fill .3s ease-in-out;
+      outline: none;
+
+
+      &:focus-visible:not(:hover):not(:active)::after {        // ПАРАДОКС , афтер применяется а все целиком нет
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: calc(100% + 14px);
+        background-color: var(--studio);
+        z-index: -1;
+        outline: none;
+      }
 
       &:hover .header__top-btn-wrap {
         margin-left: -4px;
         padding-left: 4px;
       }
 
+                                                             // Спросить про то чтобы при ховере все вместе красилось
+
+
+      &:hover .header__top-btn-link {
+        fill: var(--wisteria);
+      }
+
+      &:active .header__top-btn-link {
+        fill: var(--amethyst);
+      }
+
       @include tablet {
-        // display: none;
         padding: 0px 88px;
         margin-bottom: 50px;
         border: 2px solid var(--amethyst);
@@ -232,6 +257,11 @@
         &:hover {
           color: var(--wisteria);
         }
+
+        &:active {
+          color: var(--amethyst);
+        }
+
       }
 
     }
@@ -288,9 +318,29 @@
       cursor: pointer;
       transition: color .3s ease-in-out;
 
-      &:hover,
-      &:focus {
-        color: #9d5cd0;
+
+      &:focus-visible:not(:hover):not(:active)::before {
+        content: "";
+        position: absolute;
+        left: -10px;
+        top: 10px;
+        bottom: 27px;
+        width: calc(100% + 10px);
+        background-color: var(--studio);
+        z-index: -1;
+        outline: none;
+        animation:scale-up-hor-center .4s cubic-bezier(.39,.575,.565,1.000) both;
+      }
+
+      @keyframes scale-up-hor-center{0%{transform:scaleX(.4)}100%{transform:scaleX(1)}};
+
+
+      &:hover {
+        color: var(--amethyst);
+      }
+
+      &:active{
+        color: var(--studio);
       }
 
       &::after {
@@ -308,7 +358,7 @@
       }
 
       &.is-active {
-        color: red;
+        color: var(--studio);
       }
 
       &.is-active::after {
@@ -316,7 +366,7 @@
       }
 
       &:active {
-        color: #7943a4;
+        color: var(--studio);
       }
 
       &-heading {
@@ -326,25 +376,19 @@
         font-size: 18px;
         line-height: 25px;
         color: var(--white);
+        transition: color .3s ease-in-out;
+
+        &:hover {
+          color: var(--amethyst);
+        }
+
+        &:active{
+          color: var(--studio);
+        }
+
       }
 
-
-
-      &:hover {
-        color: var(--wisteria);
-      }
-
-      &:active{
-        color: var(--studio);
-      }
-
-
-      // &:focus{
-
-      //   outline: none;
-      // }
     }
-
 
 
     &-drop {
@@ -360,7 +404,7 @@
 
       & .simplebar-track.simplebar-vertical{
         width: 2px;
-        background-color: #000;
+        background-color: var(--black);
       }
 
       & .simplebar-track.simplebar-vertical
@@ -369,7 +413,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: #fff;
+        background-color: var(--white);
         opacity: 1;
       }
 
@@ -438,7 +482,7 @@
           &:hover,
           &:focus {
             outline: none;
-            border-color: #9D5CD0;
+            border-color:var(--amethyst);
           }
 
           &:active::before{
@@ -562,16 +606,20 @@
 
       &-btn {
 
+
         &-img {
           width: 30px;
           height: 30px;
-          // margin-top: 36px;
           margin-right: 49px;
           fill: var(--white);
 
+          &:hover{                                   //НЕ РАБОТАЕТ СО СНИППЕТОМ
+            stroke: var(--wisteria);
+            fill: var(--wisteria);
+          }
+
           @include tablet {
             & {
-              // position: absolute;
               right: 2%;
               top: 7%;
             }
@@ -612,11 +660,24 @@
       // align-items: center;
     }
 
+    &__search {
+
+    }
+
     &-input{
       outline: none;
       color: white;
       border-bottom: 1px solid var(--white);
       background-color: transparent;
+      transition: border-bottom .3s ease-in-out;
+
+      &:focus::placeholder {                      // КАК СДЕЛАТЬ МЕДЛЕННО УБИРАНИЕ НАДПИСИ
+        color: transparent;
+      }
+
+      &:hover {
+        border-bottom: 1px solid var(--wisteria);
+      }
     }
 
     &-input::placeholder {
