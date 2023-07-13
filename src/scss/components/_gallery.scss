@@ -297,7 +297,26 @@
   }
 
   &__swiper {
-    & .swiper-gallery {
+
+    &-link {                           // ссылка штириной 380 зч почему то
+      width: 350px;
+      height: 350px;
+    }
+
+      & .swiper-gallery {
+
+
+
+      &::before {
+        content: "";
+        width: 350px;
+        height: 350px;
+        position: absolute;
+        background-color: rgba(194, 131, 243, 0.4);
+        z-index: 2;
+        opacity: 0;
+        transition: opacity .3s ease-in-out, outline .3s ease-in-out;    // Нет плавности у аутлайна
+      }
 
       &::after {
         content: "";
@@ -315,13 +334,23 @@
         transition: opacity .3s ease-in-out;
       }
 
-      &:hover {
+      &:focus-visible:not(:hover):not(:active) {       // Палка стоит криво
+        outline: 3px solid var(--studio);
+      }
 
-        &::after {
+      &:hover::after {
           opacity: 1;
         }
+
+      &:active::before {
+        opacity: 1;
+        outline: 3px solid var(--studio);
       }
+
     }
   }
+
+
+
 }
 

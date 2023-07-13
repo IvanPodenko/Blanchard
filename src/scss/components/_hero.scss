@@ -1,5 +1,4 @@
 .hero {
-
   &__image {
     width: 100%;
 
@@ -10,28 +9,25 @@
     }
   }
 
-    position: relative;
-    // top: 0px;
-    // height: 800px;
-    // background-image: url("../img/slider1.webp");
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // margin-bottom: 90px;
+  position: relative;
+  // top: 0px;
+  // height: 800px;
+  // background-image: url("../img/slider1.webp");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // margin-bottom: 90px;
 
+  &__content {
+    position: absolute;
+    top: 18%;
+    max-width: 597px;
+    padding-right: 20px;
+    // margin-left: 50px;
+    z-index: 1;
+    // padding-bottom: 133px;
 
-    &__content {
-
-      position: absolute;
-      top: 18%;
-      max-width: 597px;
-      padding-right: 20px;
-      // margin-left: 50px;
-      z-index: 1;
-      // padding-bottom: 133px;
-
-    &__title {
-
-      font-family: 'Open Sans';
+    &-title {
+      font-family: "Open Sans";
       font-style: normal;
       font-weight: 700;
       font-size: 72px;
@@ -39,14 +35,13 @@
       color: var(--white);
       margin-bottom: 0;
 
-
       &-hidden {
         display: none;
       }
     }
 
-    &__text {
-      font-family: 'Open Sans';
+    &-text {
+      font-family: "Open Sans";
       font-style: normal;
       font-weight: 700;
       font-size: 18px;
@@ -57,8 +52,8 @@
       width: 545px;
     }
 
-    &__btn {
-      font-family: 'Open Sans';
+    &-btn {                                                // при увеличени экрана кнопка  уезжает
+      font-family: "Open Sans";
       font-style: normal;
       font-weight: 700;
       font-size: 18px;
@@ -68,17 +63,22 @@
       border-radius: 100px;
       background: var(--amethyst);
       padding: 22px 35px;
+      transition: outline .3s ease;
+      // outline: 0px  solid red;
+
+      &:focus-visible:not(:hover):not(:active)  {
+        outline: 2px  solid var(--wisteria);
+        outline-offset: 5px;
+      }
+
+      &:hover{
+        outline: 3px solid var(--mauve);
+      }
+
+      &:active {
+        outline: 3px solid var(--mauve);
+        background-color: var(--studio);
+      }
     }
   }
-
-
-
-
-
-
 }
-
-
-
-
-
