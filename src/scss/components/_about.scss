@@ -19,6 +19,10 @@
     font-size: 16px;
     line-height: 32px;
     color: var(--night-rider);
+
+    @include tablet {
+      width: 925px;
+    }
   }
 }
 

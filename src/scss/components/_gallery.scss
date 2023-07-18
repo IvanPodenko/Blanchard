@@ -279,8 +279,44 @@
       }
     }
 
+    & .btn-next {
+
+      // border: 2px solid var(--black);          // нужели ли туь бордер
+      transition: background-color .3s ease;
+
+
+      &:focus-visible {
+        outline: none;
+        border: 2px solid var(--black);
+      }
+
+      &:hover {
+        background-color: var(--amethyst);
+      }
+
+      &:active {
+        background-color: var(--studio);
+      }
+    }
+
     & .btn-prev {
+      // border: 2px solid var(--black);
       margin-right: 10px;
+      transition: background-color .3s ease;
+
+
+      &:focus-visible {
+        outline: none;
+        border: 2px solid var(--black);
+      }
+
+      &:hover {
+        background-color: var(--amethyst);
+      }
+
+      &:active {
+        background-color: var(--studio);
+      }
     }
 
     & .btn-next::before {

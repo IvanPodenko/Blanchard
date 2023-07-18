@@ -21,6 +21,7 @@
 
         @include tablet {
           display: block;
+          margin: 0;
           // position: absolute;
           // top: 7%;
         }
@@ -115,7 +116,7 @@
           display: flex;
           flex-direction: column;
           padding-top: 10%;
-          padding-left: 70px;
+          padding-left: 50px;
           }
         }
 
@@ -224,11 +225,12 @@
       }
 
       @include tablet {
-        padding: 0px 88px;
+        padding: 22px 88px;
         margin-bottom: 50px;
         border: 2px solid var(--amethyst);
         border-radius: 100px;
         background: transparent;
+        margin-left: 50px;
       }
 
       &-wrap {

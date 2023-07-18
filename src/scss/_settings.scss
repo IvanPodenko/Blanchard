@@ -86,6 +86,10 @@ a {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+
+  @include tablet {
+    padding-left: 50px;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {

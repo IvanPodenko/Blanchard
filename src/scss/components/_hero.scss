@@ -63,7 +63,7 @@
       border-radius: 100px;
       background: var(--amethyst);
       padding: 22px 35px;
-      transition: outline .3s ease;
+      transition: border .3s ease, background-color .3s ease, outline .3s ease ;
       // outline: 0px  solid red;
 
       &:focus-visible:not(:hover):not(:active)  {
@@ -76,7 +76,7 @@
       }
 
       &:active {
-        outline: 3px solid var(--mauve);
+        border: 3px solid var(--mauve);
         background-color: var(--studio);
       }
     }
