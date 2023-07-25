@@ -13,6 +13,29 @@ const swiper = new Swiper('.gallery__swiper', {
   navigation: {
     nextEl: ".btn-next",
     prevEl: ".btn-prev",
-  }
+  },
+
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 38
+    },
+
+    992: {
+      slidesPerView: 2,
+      spaceBetween: 34
+    },
+
+    1201: {
+      slidesPerView: 3,
+      spaceBetween: 50
+    },
+
+    1920: {
+      slidesPerView: 3,
+      spaceBetween: 50
+    }
+  },
+
 });
 
