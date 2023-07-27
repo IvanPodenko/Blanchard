@@ -194,7 +194,7 @@
       display: flex;
       align-items: baseline;
       color: var(--white);
-      transition: fill .3s ease-in-out;
+      // transition: fill .3s ease-in-out;
       outline: none;
 
 
@@ -215,7 +215,7 @@
         padding-left: 4px;
       }
 
-                                                             // Спросить про то чтобы при ховере все вместе красилось
+
 
 
       &:hover .header__top-btn-link {
@@ -246,6 +246,7 @@
       &-link {
         fill: var(--white);
         margin-left: -4px;
+        transition: fill .3s ease-in-out;
       }
 
       &-heading {
@@ -291,6 +292,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      min-height: 70px;
+      padding-top: 23px;
+      padding-bottom: 10px;
     }
 
     &-list {
@@ -317,7 +321,7 @@
       background-color: transparent;
       font-size: 18px;
       font-weight: 400;
-      color: gray;
+      color: var(--white);
       transition: color 0.2s ease-in-out;
       cursor: pointer;
       transition: color .3s ease-in-out;

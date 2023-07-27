@@ -281,7 +281,7 @@
 
     & .btn-next {
 
-      // border: 2px solid var(--black);          // нужели ли туь бордер
+      // border: 2px solid var(--black);
       transition: background-color .3s ease;
 
 
@@ -325,18 +325,18 @@
       border-right: 1px solid var(--white);
     }
 
-    & .btn-prev::before {
+    & .btn-prev::before {     
       left: calc(50% - 7px / 2);
       border-left: 1px solid var(--white);
       border-bottom: 1px solid var(--white);
     }
   }
 
-  &__swiper {
+  &__swiper {                                                                   // КАРТИНКИ НЕ ПО РАЗМЕРУ
 
     &-link {
-      width: 350px;
-      height: 350px;
+      // width: 350px;
+      // height: 350px;
     }
 
       & .swiper-gallery {
@@ -350,7 +350,7 @@
         background-color: rgba(194, 131, 243, 0.4);
         z-index: 2;
         opacity: 0;
-        transition: opacity .3s ease-in-out, outline .3s ease-in-out;    // Нет плавности у аутлайна
+        transition: opacity .3s ease-in-out, outline .3s ease-in-out;
       }
 
       &::after {
@@ -369,7 +369,7 @@
         transition: opacity .3s ease-in-out;
       }
 
-      &:focus-visible:not(:hover):not(:active) {       // Палка стоит криво
+      &:focus-visible:not(:hover):not(:active) {
         outline: 3px solid var(--studio);
       }
 

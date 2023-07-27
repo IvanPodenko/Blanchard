@@ -1,4 +1,15 @@
 .hero {
+
+  &__swiper {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+
   &__image {
     width: 100%;
 
@@ -10,20 +21,18 @@
   }
 
   position: relative;
-  // top: 0px;
+   // top: 0px;
   // height: 800px;
-  // background-image: url("../img/slider1.webp");
-  // background-repeat: no-repeat;
-  // background-size: cover;
   // margin-bottom: 90px;
 
   &__content {
-    position: absolute;
-    top: 18%;
+    // position: relative;
     max-width: 597px;
-    padding-right: 20px;
+    padding: 140px 0px;
+    // max-width: 597px;
+    // padding-right: 20px;
     // margin-left: 50px;
-    z-index: 1;
+    // z-index: 1;
     // padding-bottom: 133px;
 
     &-title {
