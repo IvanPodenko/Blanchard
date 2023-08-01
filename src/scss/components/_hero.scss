@@ -12,6 +12,7 @@
 
   &__image {
     width: 100%;
+    height: 800px;
 
     @include tablet {
       & {
@@ -47,6 +48,15 @@
       &-hidden {
         display: none;
       }
+
+      @include mobile {
+        font-size: 32px;
+        line-height: 50px;
+      }
+
+      @include small-mobile {
+        text-align: center;
+      }
     }
 
     &-text {
@@ -59,9 +69,17 @@
       margin-top: 0;
       margin-bottom: 92px;
       width: 545px;
+
+      @include small-tablet {
+      width: 661px;
+      }
+
+      @include mobile {
+        width: 547px;
+      }
     }
 
-    &-btn {                                                // при увеличени экрана кнопка  уезжает + она прыгает при эффектах
+    &-btn {
       font-family: "Open Sans";
       font-style: normal;
       font-weight: 700;
@@ -88,6 +106,12 @@
         border: 3px solid var(--mauve);
         background-color: var(--studio);
       }
+    }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 }

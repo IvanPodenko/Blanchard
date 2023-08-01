@@ -16,9 +16,9 @@ const swiper = new Swiper('.gallery__swiper', {
   },
 
   breakpoints: {
-    441: {
+    1024: {
       slidesPerView: 2,
-      spaceBetween: 30
+      spaceBetween: 20
     },
 
     1200: {

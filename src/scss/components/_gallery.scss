@@ -7,16 +7,19 @@
 
   &__container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    // flex-direction: row;
+    // justify-content: space-around;
+    justify-content: space-between;
     padding-top: 80px;
   }
 
   &__left {
     // display: flex;
     // flex-direction: column;
-    width: 40%;
-    margin-right: 50px;
+    // width: 40%;
+    // margin-right: 50px;
+    max-width: 400px;
+    width: 100%;
   }
 
   &__title {
@@ -48,8 +51,14 @@
   //  }
 
   & .choices {
+
+    &.header_choices {
+      margin-right: 50px;
+    }
+
+
     &__inner {
-      width: 400px;
+      width: 350px;
       height: 40px;
       // padding-left: 16px;
       padding-top: 0;
@@ -234,7 +243,8 @@
   // }
 
   &__right {
-    width: 1200px;
+    max-width: 1150px;
+    width: 100%;
     padding-top: 20px;
 
     &-navigation {
@@ -325,18 +335,28 @@
       border-right: 1px solid var(--white);
     }
 
-    & .btn-prev::before {     
+    & .btn-prev::before {
       left: calc(50% - 7px / 2);
       border-left: 1px solid var(--white);
       border-bottom: 1px solid var(--white);
     }
   }
 
-  &__swiper {                                                                   // КАРТИНКИ НЕ ПО РАЗМЕРУ
+  &__image {                                                        // НЕТУ АУТЛАЙНА  НУ ИЛИ БОРДЕРА
+      width: 350px;
+      height: 350px;
+
+      &:active {
+        opacity: 1;
+        border: 3px solid var(--studio);
+      }
+
+  }
+
+  &__swiper {
 
     &-link {
-      // width: 350px;
-      // height: 350px;
+
     }
 
       & .swiper-gallery {
@@ -377,10 +397,10 @@
           opacity: 1;
         }
 
-      &:active::before {
-        opacity: 1;
-        outline: 3px solid var(--studio);
-      }
+      // &:active::before {
+      //   opacity: 1;
+      //   outline: 3px solid var(--studio);
+      // }
 
     }
   }
