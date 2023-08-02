@@ -11,6 +11,11 @@
     // justify-content: space-around;
     justify-content: space-between;
     padding-top: 80px;
+    gap: 50px;
+
+    @include small-tablet {
+      flex-direction: column;
+    }
   }
 
   &__left {
@@ -53,12 +58,11 @@
   & .choices {
 
     &.header_choices {
-      margin-right: 50px;
+      // margin-right: 50px;
     }
 
-
     &__inner {
-      width: 350px;
+      // width: 350px;
       height: 40px;
       // padding-left: 16px;
       padding-top: 0;
@@ -154,6 +158,10 @@
     display: flex;
     flex-direction: column;
     padding-top: 123px;
+
+    @include small-tablet {
+      padding-top: 40px;
+    }
   }
 
   &__custom-checkbox {
@@ -243,9 +251,20 @@
   // }
 
   &__right {
-    max-width: 1150px;
-    width: 100%;
+    width: calc(1150 / 1600 * 100%);
+    // max-width: 1150px;
+    // width: 100%;
     padding-top: 20px;
+
+    @include for-desktop {
+      width: calc(594 / 925 * 100%);
+    }
+
+    @include small-tablet {
+      width: calc(670 / 670 * 100%);
+      // width: 100%;
+      padding-bottom: 80px;
+    }
 
     &-navigation {
       display: inline-flex;
@@ -290,10 +309,8 @@
     }
 
     & .btn-next {
-
       // border: 2px solid var(--black);
-      transition: background-color .3s ease;
-
+      transition: background-color 0.3s ease;
 
       &:focus-visible {
         outline: none;
@@ -312,8 +329,7 @@
     & .btn-prev {
       // border: 2px solid var(--black);
       margin-right: 10px;
-      transition: background-color .3s ease;
-
+      transition: background-color 0.3s ease;
 
       &:focus-visible {
         outline: none;
@@ -342,25 +358,19 @@
     }
   }
 
-  &__image {                                                        // НЕТУ АУТЛАЙНА  НУ ИЛИ БОРДЕРА
-      width: 350px;
-      height: 350px;
+  &__image {
 
-      &:active {
-        opacity: 1;
-        border: 3px solid var(--studio);
-      }
-
+    width: 350px;
+    height: 350px;
   }
 
   &__swiper {
 
     &-link {
-
-    }
-
-      & .swiper-gallery {
-
+      display: flex;
+      outline: none;
+      border: 3px solid transparent;
+      transition: border 0.3s ease-in-out;
 
       &::before {
         content: "";
@@ -370,7 +380,7 @@
         background-color: rgba(194, 131, 243, 0.4);
         z-index: 2;
         opacity: 0;
-        transition: opacity .3s ease-in-out, outline .3s ease-in-out;
+        transition: opacity 0.3s ease-in-out, outline 0.3s ease-in-out;
       }
 
       &::after {
@@ -386,26 +396,24 @@
         z-index: 2;
         opacity: 0;
         background-color: rgba(0, 0, 0, 0.5);
-        transition: opacity .3s ease-in-out;
+        transition: opacity 0.3s ease-in-out;
       }
 
-      &:focus-visible:not(:hover):not(:active) {
-        outline: 3px solid var(--studio);
-      }
+
 
       &:hover::after {
-          opacity: 1;
-        }
+        opacity: 1;
+      }
 
-      // &:active::before {
-      //   opacity: 1;
-      //   outline: 3px solid var(--studio);
-      // }
+
+      &:focus-visible:not(:hover):not(:active) {
+        border: 3px solid var(--studio);
+      }
+
+      &:active::before {
+        opacity: 1;
+      }
 
     }
   }
-
-
-
 }
-

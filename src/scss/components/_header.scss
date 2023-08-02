@@ -671,6 +671,14 @@
 
   &__form {
 
+    &-top {
+
+      & .form__active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
     &-bottom {
       display: flex;
       // align-items: center;
@@ -682,7 +690,7 @@
 
     &-input{
       outline: none;
-      color: white;
+      color: var(--white);
       border-bottom: 1px solid var(--white);
       background-color: transparent;
       transition: border-bottom .3s ease-in-out;
@@ -704,9 +712,10 @@
       line-height: 25px;
       color: rgba(255, 255, 255, 0.85);
     }
-
   }
 }
+
+
 
 
 

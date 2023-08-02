@@ -68,14 +68,14 @@
       color: var(--white);
       margin-top: 0;
       margin-bottom: 92px;
-      width: 545px;
+      max-width: 545px;
 
       @include small-tablet {
-      width: 661px;
+      max-width: 661px;
       }
 
       @include mobile {
-        width: 547px;
+        max-width: 547px;
       }
     }
 

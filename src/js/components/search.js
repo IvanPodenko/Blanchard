@@ -7,7 +7,7 @@ document.querySelector(".header__search-top-btn").addEventListener("click", func
 
 document.addEventListener("click", function(e) {
   let target = e.target;
-  let form = document.querySelector(".header__form-top-label");
+  let form = document.querySelector(".header__form-top");
   if (!target.closest(".form-container")) {
   form.classList.remove("form__active");
     form.querySelector("input").value = "";
