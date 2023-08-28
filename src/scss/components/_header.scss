@@ -112,6 +112,8 @@
       &-list {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 784px;
 
         @include tablet {
           & {
@@ -132,7 +134,7 @@
       &-item {
 
       &:not(:last-child) {
-        padding-right: 68px;
+        margin-right: 68px;
 
           @include mobile {
             padding-bottom: 5px;
@@ -301,6 +303,7 @@
       display: flex;
       justify-content: space-between;
       width: 70%;
+      flex-wrap: wrap;
     }
 
     &-item {

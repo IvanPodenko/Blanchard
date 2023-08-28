@@ -3,7 +3,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 const swiper = new Swiper('.gallery__swiper', {
   modules: [Navigation, Pagination],
   slidesPerView: 1,
-  spaceBetween: 20,
+  spaceBetween: 50,
 
   pagination: {
     el: ".gallery__right-pagination",

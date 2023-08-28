@@ -1,80 +1,91 @@
-<div class="gallery">
+<section class="gallery">
   <div class="gallery__container container">
 
 
-    <div class="gallery__left">
-      <h2 class="gallery__title"> Галерея </h2>
 
-
-      <h3 class="gallery__filter">Фильтр:</h3>
-
-        <select class="gallery__drop js-choice" name="art" id="">
-          <option class="gallery__drop-list" value="Живопись">Живопись</option>
-          <option class="gallery__drop-list" value="Скульптура">Скульптура</option>
-          <option class="gallery__drop-list" value="Рисунок">Рисунок</option>
-        </select>
-
-
-
-     <div class="gallery__checkbox">
-
-      <label class="gallery__custom-checkbox">
-        <input type="checkbox" class="visually-hidden gallery__custom-checkbox--field">
-        <span class="gallery__custom-checkbox--visible"></span>
-        <span class="gallery__custom-checkbox--content">XIX Век</span>
-      </label>
-
-      <label class="gallery__custom-checkbox">
-        <input type="checkbox" class=" visually-hidden gallery__custom-checkbox--field">
-        <span class="gallery__custom-checkbox--visible"></span>
-        <span class="gallery__custom-checkbox--content">XX Век</span>
-      </label>
-
-      <label class="gallery__custom-checkbox">
-        <input type="checkbox" class="visually-hidden gallery__custom-checkbox--field">
-        <span class="gallery__custom-checkbox--visible"></span>
-        <span class="gallery__custom-checkbox--content">Современность</span>
-      </label>
-
-     </div>
-    </div>
-
-    <div class="gallery__right">
-
-      <div class="gallery__right-navigation">
-        <button class="gallery__right-btn btn-prev btn-reset" aria-label="К предыдущему слайду"></button>
-        <div class="gallery__right-pagination"></div>
-        <button class="gallery__right-btn btn-next btn-reset" aria-label="К следующему слайду"></button>
-      </div>
-
-      <div class="swiper gallery__swiper">
-        <div class="swiper-wrapper">
-           <a class="gallery__swiper-link swiper-slide swiper-gallery" href="#">
-            <img loading="lazy" src="..//img/gallery-slider.jpg" class="gallery__image" width="350" height="350" alt="">
-           </a>
-           <a class="gallery__swiper-link swiper-slide swiper-gallery" href="#">
-            <img loading="lazy" src="..//img/gallery-slider1.jpg" class="gallery__image" width="350" height="350" alt="">
-           </a>
-           <a class="gallery__swiper-link swiper-slide swiper-gallery" href="#">
-            <img loading="lazy" src="..//img/gallery-slider2.jpg" class="gallery__image" width="350" height="350" alt="">
-           </a>
-           <a class="gallery__swiper-link swiper-slide swiper-gallery" href="#">
-            <img loading="lazy" src="..//img/gallery-slider3.jpg" class="gallery__image" width="350" height="350" alt="">
-           </a>
-           <a class="gallery__swiper-link swiper-slide swiper-gallery" href="#">
-            <img loading="lazy" src="..//img/gallery-slider4.jpg" class="gallery__image" width="350" height="350" alt="">
-           </a>
-           <a class="gallery__swiper-link swiper-slide swiper-gallery" href="#">
-            <img loading="lazy" src="..//img/gallery-slider5.jpg" class="gallery__image" width="350" height="350" alt="">
-           </a>
-        </div>
-      </div>
-
-    </div>
   </div>
+</section>
+
+
+
+<picture>
+  <source srcset=".webp" type="image/webp" media="1024">
+  <source srcset=".png" type="image/webp" media="1024">
+  <source srcset=".webp" type="image/webp">
+  <img loading="lazy" src=".png" class="image" width="" height="" alt="">
+</picture>
+
+
+
+
+
+<!-- <div class="gallery__left">
+  <h2 class="gallery__title"> Галерея </h2>
+
+
+  <h3 class="gallery__filter">Фильтр:</h3>
+
+    <select class="gallery__drop js-choice" name="art" id="">
+      <option class="gallery__drop-list" value="Живопись">Живопись</option>
+      <option class="gallery__drop-list" value="Скульптура">Скульптура</option>
+      <option class="gallery__drop-list" value="Рисунок">Рисунок</option>
+    </select>
+
+
+
+ <div class="gallery__checkbox">
+
+  <label class="gallery__custom-checkbox">
+    <input type="checkbox" class="visually-hidden gallery__custom-checkbox--field">
+    <span class="gallery__custom-checkbox--visible"></span>
+    <span class="gallery__custom-checkbox--content">XIX Век</span>
+  </label>
+
+  <label class="gallery__custom-checkbox">
+    <input type="checkbox" class=" visually-hidden gallery__custom-checkbox--field">
+    <span class="gallery__custom-checkbox--visible"></span>
+    <span class="gallery__custom-checkbox--content">XX Век</span>
+  </label>
+
+  <label class="gallery__custom-checkbox">
+    <input type="checkbox" class="visually-hidden gallery__custom-checkbox--field">
+    <span class="gallery__custom-checkbox--visible"></span>
+    <span class="gallery__custom-checkbox--content">Современность</span>
+  </label>
+
+ </div>
 </div>
 
+<div class="gallery__right">
 
+  <div class="gallery__right-navigation">
+    <button class="gallery__right-btn btn-prev btn-reset" aria-label="К предыдущему слайду"></button>
+    <div class="gallery__right-pagination"></div>
+    <button class="gallery__right-btn btn-next btn-reset" aria-label="К следующему слайду"></button>
+  </div>
 
+  <div class="swiper gallery__swiper">
+    <div class="swiper-wrapper">
+       <a class="gallery__swiper-link swiper-slide swiper-gallery" href="#">
+        <img loading="lazy" src="..//img/gallery-slider.jpg" class="gallery__image" width="350" height="350" alt="слайд 1">
+       </a>
+       <a class="gallery__swiper-link swiper-slide swiper-gallery" href="#">
+        <img loading="lazy" src="..//img/gallery-slider1.jpg" class="gallery__image" width="350" height="350" alt="слайд 2">
+       </a>
+       <a class="gallery__swiper-link swiper-slide swiper-gallery" href="#">
+        <img loading="lazy" src="..//img/gallery-slider2.jpg" class="gallery__image" width="350" height="350" alt="слайд 3">
+       </a>
+       <a class="gallery__swiper-link swiper-slide swiper-gallery" href="#">
+        <img loading="lazy" src="..//img/gallery-slider3.jpg" class="gallery__image" width="350" height="350" alt="слайд 4">
+       </a>
+       <a class="gallery__swiper-link swiper-slide swiper-gallery" href="#">
+        <img loading="lazy" src="..//img/gallery-slider4.jpg" class="gallery__image" width="350" height="350" alt="слайд 5">
+       </a>
+       <a class="gallery__swiper-link swiper-slide swiper-gallery" href="#">
+        <img loading="lazy" src="..//img/gallery-slider5.jpg" class="gallery__image" width="350" height="350" alt="слайд 6">
+       </a>
+    </div>
+  </div>
 
-
+</div>
+ -->
