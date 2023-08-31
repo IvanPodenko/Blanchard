@@ -17,10 +17,15 @@
   }
 
   &__left {
-    min-height: 400px;        // если тут дать высоту то тогда встает у чекбокса auto
     display: flex;
     flex-direction: column;
     width: calc(400 / 1600 * 100%);
+
+    @include small-tablet {
+      width: 100%;
+      marign-left: 0;
+      margin-bottom: 20px;
+    }
 
     &-title {
       font-family: "Open Sans";
@@ -34,7 +39,6 @@
     }
 
     &-subtitle {
-      // display: block;
       margin-bottom: 10px;
       font-family: "Open Sans";
       font-style: normal;
@@ -49,11 +53,15 @@
       margin-bottom: 50px;
       border-radius: 5px;
       background-color: lightgray;
+
+      @include small-tablet {
+        max-width: 300px;
+      }
     }
   }
 
   &__checkbox {
-    margin-top: auto;    // auto тут почему то не работает
+    margin-top: auto;
     display: flex;
     flex-direction: column;
     color: wheat;
@@ -77,24 +85,31 @@
   &__right {
     width: calc(1150 / 1600 * 100%);
     margin-right: 0;
+    margin-top: 35px;
 
     &-navigation {
       display: inline-flex;
       align-items: center;
-      margin-bottom: 10px;
+      margin-bottom: 30px;
+
+      @include mobile {
+        align-self: center;
+        margin-top: 20px;
+      }
     }
 
     &-pagination {
-      margin-right: 10px;
+      margin-right: 12px;
+      margin-left: 12px;
       text-align: center;
-      color: #373850;
+      color: var(--white);
     }
 
     &-btn {
       position: relative;
       flex-shrink: 0;
-      width: 26px;
-      height: 26px;
+      width: 30px;
+      height: 30px;
       background-color: #527590;
       border: none;
       border-radius: 50%;
@@ -117,17 +132,17 @@
     }
 
     & .btn-prev {
-      margin-right: 10px;
+      // margin-right: 10px;
     }
 
     & .btn-prev::before {
-      left: calc(50% - 7px / 2);
+      left: calc(50% - 5px / 2);
       border-left: 1px solid #fff;
       border-bottom: 1px solid #fff;
     }
 
     & .btn-next::before {
-      left: calc(50% - 7px / 2);
+      left: calc(50% - 9px / 2);
       border-top: 1px solid #fff;
       border-right: 1px solid #fff;
     }
@@ -136,10 +151,21 @@
   &__swiper {
     overflow: hidden;
 
+    @include small-tablet {
+      width: 100%;
+      marign-left: 0;
+      margin-bottom: 80px;
+    }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
     &-link {
       position: relative;
       overflow: hidden;
-      // background-color: #926B88;
+      background-color: #926B88;
 
 
       &::before {
@@ -147,10 +173,14 @@
         position: relative;
         z-index: 1;
         display: block;
-        // padding-top: calc(100% - 6px);
+        padding-top: calc(100% - 6px);
         border: 3px solid transparent;
         box-sizing: border-box;
         transition: background-color .3s ease, border-color .3s ease;
+
+        @include mobile {
+          padding-top: calc(110% - 6px);
+        }
       }
 
       &::after {
@@ -159,8 +189,8 @@
         left: 0;
         top: 0;
         z-index: 2;
-        width: 351px;
-        height: 356px;
+        width: 100%;
+        height: 100%;
         padding: 25px;
         box-sizing: border-box;
         opacity: 0;
@@ -193,10 +223,10 @@
   }
 
   &__image {
-    // position: absolute;
+    position: absolute;
     top: 0;
     left: 0;
-    // width: 100%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
   }
