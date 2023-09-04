@@ -64,12 +64,50 @@
     margin-top: auto;
     display: flex;
     flex-direction: column;
-    color: wheat;
    }
 
   &__custom {
 
     &-checkbox {
+
+      cursor: pointer;
+
+      &--field:checked ~ &--visible::before {
+        opacity: 1;
+      }
+
+      &--field:checked ~ &--visible {
+        border-color: var(--wisteria);
+      }
+
+      &--field:checked ~ &--content {
+        color: var(--wisteria);
+        transition: color 0.3s ease-in-out;
+      }
+
+      &--visible {
+        position: relative;
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-right: 12px;
+        border: 1px solid var(--white);
+        transition: border-color 0.3s ease-in-out;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background-color: var(--wisteria);
+          opacity: 0;
+          transform: translate(-50%, -50%);
+          transition: opacity 0.3s ease-in-out;
+        }
+      }
 
       &--content {
         font-family: "Open Sans";
@@ -79,8 +117,18 @@
         line-height: 32px;
         color: var(--white);
       }
+
+      &:hover .gallery__custom-checkbox--content {
+        color: var(--wisteria);
+      }
+
+      &:hover .gallery__custom-checkbox--visible {
+        border-color: var(--wisteria);
+      }
     }
   }
+
+
 
   &__right {
     width: calc(1150 / 1600 * 100%);
@@ -110,7 +158,7 @@
       flex-shrink: 0;
       width: 30px;
       height: 30px;
-      background-color: #527590;
+      background-color: var( --dim-gray);
       border: none;
       border-radius: 50%;
       cursor: pointer;
@@ -128,6 +176,20 @@
       &.swiper-button-disabled {
         cursor: auto;
         background-color: rgba(102,102,102, 0.5);
+      }
+
+      &:hover {
+        background-color: var(--amethyst);     // как тут сделать чтобы при дизабле не было цвета
+      }
+
+      &:focus {
+        outline: none;
+        border: 2px solid var(--black);
+      }
+
+      &:active {
+        background-color: var(--studio);
+        border: 2px solid var(--black);
       }
     }
 
@@ -165,7 +227,7 @@
     &-link {
       position: relative;
       overflow: hidden;
-      background-color: #926B88;
+      background-color: var(--wisteria);
 
 
       &::before {
@@ -212,11 +274,11 @@
       }
 
       &:focus::before {
-        border-color: #7943A4;
+        border-color: var(--studio);
       }
 
       &:active::before {
-        border-color: #D1A9F0;
+        border-color: var(--mauve);
         background-color: rgba(194, 131, 243, 0.4);
       }
     }
