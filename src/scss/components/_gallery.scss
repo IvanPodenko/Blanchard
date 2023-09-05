@@ -1,4 +1,4 @@
-// .custom-checkbox { @include custom-checkbox};
+
 
 .gallery {
   margin-bottom: 40px;
@@ -48,16 +48,53 @@
       color: var(--white);
     }
 
-    &-select {
-      min-height: 50px;
-      margin-bottom: 50px;
-      border-radius: 5px;
-      background-color: lightgray;
-
-      @include small-tablet {
-        max-width: 300px;
-      }
+    & .choices .choices__list .choices__item.is-selected {
+      display: none;
     }
+
+    & .choices__inner {
+      padding: 0;
+      background-color: transparent;
+      border-radius: 6px;
+    }
+
+    & .choices[data-type*=select-one] .choices__inner {
+      padding: 0;
+      padding: 4px 0 3px 16px;
+    }
+
+    & .choices__list--single {
+      padding: 0;
+    }
+
+    & .choices__item {
+      padding: 0;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 32px;
+      color: var(--white);
+    }
+
+    & .choices[data-type*=select-one]::after {
+      content: "";
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      right: 18px;
+      top: 18px;
+      border-top: 1px solid var(--white);
+      border-right: 1px solid var(--white);
+      transform: rotate(135deg);
+      pointer-events: none;
+      transition: transform .15s ease-in-out;
+    }
+
+    & .choices[data-type*=select-one].is-open::after {
+      top: 20px;
+      margin-top: 0;
+      transform: rotate(-45deg);
+    }
+
   }
 
   &__checkbox {
@@ -135,6 +172,10 @@
     margin-right: 0;
     margin-top: 35px;
 
+    @include small-tablet {
+      width: 100%;
+    }
+
     &-navigation {
       display: inline-flex;
       align-items: center;
@@ -173,13 +214,8 @@
         transform-origin: center;
       }
 
-      &.swiper-button-disabled {
-        cursor: auto;
-        background-color: rgba(102,102,102, 0.5);
-      }
-
       &:hover {
-        background-color: var(--amethyst);     // как тут сделать чтобы при дизабле не было цвета
+        background-color: var(--amethyst);
       }
 
       &:focus {
@@ -190,6 +226,12 @@
       &:active {
         background-color: var(--studio);
         border: 2px solid var(--black);
+      }
+
+      &:disabled {
+        cursor: auto;
+        background-color: rgba(102,102,102, 0.5);
+        border: 2px solid rgba(102,102,102, 0.5) ;
       }
     }
 
@@ -215,7 +257,6 @@
 
     @include small-tablet {
       width: 100%;
-      marign-left: 0;
       margin-bottom: 80px;
     }
 

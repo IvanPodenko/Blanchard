@@ -22,15 +22,15 @@ const swiper = new Swiper('.gallery__swiper', {
   //     spaceBetween: 20
   //   },
 
-    441: {
+    576: {
       slidesPerView: 2,
-      spaceBetween: 20
+      spaceBetween: 38
     },
 
-    // 768: {
-    //   slidesPerView: 2,
-    //   spaceBetween: 50
-    // },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 38
+    },
 
     1024: {
       slidesPerView: 2,

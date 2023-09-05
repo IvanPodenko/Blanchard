@@ -37,14 +37,14 @@
       outline: none;
 
 
-      @include tablet {
-        & {
-          // margin-right: 10%;
-          // position: absolute;
-          // left: 40%;
-          // top: 7%;
-        }
-      }
+      // @include tablet {
+      //   & {
+      //     margin-right: 10%;
+      //     position: absolute;
+      //     left: 40%;
+      //     top: 7%;
+      //   }
+      // }
 
       @include mobile {
         & {
@@ -76,10 +76,9 @@
       align-items: center;
       justify-content: space-between;
 
-
-
       @include tablet {
         & {
+          display: none;
           position: absolute;
           top: 0;
           left: 0;
@@ -624,7 +623,7 @@
           // margin-right: 49px;
           fill: var(--white);
 
-          &:hover{                                   //НЕ РАБОТАЕТ СО СНИППЕТОМ
+          &:hover{
             stroke: var(--wisteria);
             fill: var(--wisteria);
           }
@@ -687,9 +686,9 @@
       // align-items: center;
     }
 
-    &__search {
+    // &__search {
 
-    }
+    // }
 
     &-input{
       outline: none;
@@ -698,7 +697,7 @@
       background-color: transparent;
       transition: border-bottom .3s ease-in-out;
 
-      &:focus::placeholder {                      // КАК СДЕЛАТЬ МЕДЛЕННО УБИРАНИЕ НАДПИСИ
+      &:focus::placeholder {
         color: transparent;
       }
 
@@ -717,6 +716,7 @@
     }
   }
 }
+
 
 
 
