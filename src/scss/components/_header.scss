@@ -73,6 +73,7 @@
 
     &-nav {
       display: contents;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
 
@@ -295,7 +296,7 @@
       align-items: center;
       min-height: 70px;
       padding-top: 23px;
-      padding-bottom: 10px;
+      // padding-bottom: 10px;
     }
 
     &-list {
@@ -308,7 +309,7 @@
     &-item {
       position: relative;
       color: gray;
-      padding-bottom: 20px;
+      padding-bottom: 25px;
       list-style: none;
     }
 
