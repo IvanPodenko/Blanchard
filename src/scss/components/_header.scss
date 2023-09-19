@@ -200,24 +200,40 @@
       outline: none;
 
 
-      &:focus-visible:not(:hover):not(:active)::after {        // ПАРАДОКС , афтер применяется а все целиком нет
+      &::after  {
         content: "";
         position: absolute;
-        left: 0;
+        left: -7px;
         top: 0;
         bottom: 0;
         width: calc(100% + 14px);
         background-color: var(--studio);
-        z-index: -1;
+        // z-index: -1;
         outline: none;
+        transform: translate(0, 0) scaleX(0);
+
       }
+
+
+      &:focus-visible:not(:hover):not(:active)::after {
+        transform: translate(0, 0) scaleX(1);
+        animation:scale-up-center .4s cubic-bezier(.39,.575,.565,1.000) both
+      }
+
+      // &:focus .header__top-btn-link {
+      //   fill: var(--wisteria);
+
+      // }
+
+      // &:focus .header__top-btn-heading {
+      //   color: var(--wisteria);
+      // }
+
 
       &:hover .header__top-btn-wrap {
         margin-left: -4px;
         padding-left: 4px;
       }
-
-
 
 
       &:hover .header__top-btn-link {
@@ -243,6 +259,7 @@
         vertical-align: middle;
         transition-property: margin-left, padding-left;
         transition-duration: .3s;
+        z-index: 1;
       }
 
       &-link {
@@ -260,6 +277,7 @@
         color: var(--white);
         padding-left: 7px;
         transition: color .3s ease-in-out;
+
 
         &:hover {
           color: var(--wisteria);
@@ -618,6 +636,7 @@
       &-btn {
 
 
+
         &-img {
           width: 30px;
           height: 30px;
@@ -663,11 +682,19 @@
 
     &-btn {
 
+      outline: none;
+
+
+      &:focus-visible .header__search-btn-img {
+        fill: var(--wisteria);
+      }
+
       &-img {
         width: 20px;
         height: 20px;
         margin-right: 10px;
         fill: var(--white);
+        transition: fill 0.3s ease-in-out;
       }
     }
   }
