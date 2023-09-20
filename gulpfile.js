@@ -38,7 +38,7 @@ const rootFolder = path.basename(path.resolve());
 const srcFolder = './src';
 const buildFolder = './app';
 const paths = {
-  srcSvg: `${srcFolder}/img/svg/**.svg`,
+  srcSvg: `${srcFolder}/img/svg/**/*.svg`,
   srcImgFolder: `${srcFolder}/img`,
   buildImgFolder: `${buildFolder}/img`,
   srcScss: `${srcFolder}/scss/**/*.scss`,
@@ -49,6 +49,7 @@ const paths = {
   srcPartialsFolder: `${srcFolder}/partials`,
   resourcesFolder: `${srcFolder}/resources`,
 };
+
 
 let isProd = false; // dev by default
 
