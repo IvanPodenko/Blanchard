@@ -1,48 +1,47 @@
-// import Accordion from 'accordion-js';
+import Accordion from 'accordion-js';
+// import 'accordion-js/dist/accordion.min.css';
+
+(() => {
+  new Accordion(".js-accordion-container", {
+    openOnInit: [0]
+  });
+})();
 
 
+// Табы
+const params = {
+  tabsClass: "js-tab-btn",
+  wrap: "js-tabs-wrap",
+  content: "js-tab-content",
+  active: "active"
+};
 
-// (() => {
-//   new Accordion(".js-accordion-container", {
-//     openOnInit: [0]
-//   });
-// })();
+function setTabs(params) {
+  const tabBtns = document.querySelectorAll(`.${params.tabsClass}`);
 
+  function onTabClick(e) {
+    e.preventDefault();
+    const path = this.dataset.path;
+    const wrap = this.closest(`.${params.wrap}`);
+    const currentContent = wrap.querySelector(`.${params.content}[data-target="${path}"]`);
+    const contents = wrap.querySelectorAll(`.${params.content}`);
 
-// // Табы
-// const params = {
-//   tabsClass: "js-tab-btn",
-//   wrap: "js-tabs-wrap",
-//   content: "js-tab-content",
-//   active: "active"
-// };
+    contents.forEach((el) => {
+      el.classList.remove(params.active);
+    });
 
-// function setTabs(params) {
-//   const tabBtns = document.querySelectorAll(`.${params.tabsClass}`);
+    currentContent.classList.add(params.active);
 
-//   function onTabClick(e) {
-//     e.preventDefault();
-//     const path = this.dataset.path;
-//     const wrap = this.closest(`.${params.wrap}`);
-//     const currentContent = wrap.querySelector(`.${params.content}[data-target="${path}"]`);
-//     const contents = wrap.querySelectorAll(`.${params.content}`);
+    tabBtns.forEach((el) => {
+      el.classList.remove(params.active);
+    });
 
-//     contents.forEach((el) => {
-//       el.classList.remove(params.active);
-//     });
+    this.classList.add(params.active);
+  }
 
-//     currentContent.classList.add(params.active);
+  tabBtns.forEach(function (el) {
+    el.addEventListener("click", onTabClick);
+  });
+}
 
-//     tabBtns.forEach((el) => {
-//       el.classList.remove(params.active);
-//     });
-
-//     this.classList.add(params.active);
-//   }
-
-//   tabBtns.forEach(function (el) {
-//     el.addEventListener("click", onTabClick);
-//   });
-// }
-
-// setTabs(params);
+setTabs(params);
