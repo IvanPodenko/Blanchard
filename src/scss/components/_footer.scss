@@ -1,0 +1,28 @@
+.footer {
+
+  background-color: black;
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      height: 140px;
+      align-items: center;
+  }
+
+  &__link {
+
+    &-vk {
+      margin-right: 20px;
+    }
+  }
+
+
+
+
+
+
+}
+
+
+
+

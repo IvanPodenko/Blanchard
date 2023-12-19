@@ -1,0 +1,83 @@
+.projects {
+
+  margin-bottom: 200px;
+
+
+  &__title {
+    color: var(--night-rider);
+    font-family: Open Sans;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__descr {
+    width: 1080px;
+    color: var(--night-rider);
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+
+    &-link {
+      color: var(--amethyst);
+    }
+  }
+
+  &__subtitle {
+    color: var(--night-rider);
+    font-family: Open Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    }
+
+    &__partners {
+
+      position: relative;
+      display: flex;
+      justify-content: center;
+
+      &-prev {
+        position: absolute;
+        top: 35%;
+        left: 0;
+      }
+
+      &-next {
+        position: absolute;
+        top: 35%;
+        right: 0;
+      }
+
+      &-link {
+
+        // width: 450px;
+        // height: 150px;
+
+        &-one {
+          display: none;
+        }
+
+      }
+
+      &-image {
+        padding: 44px 103px;
+        border: 1px solid #CACACA;
+        background: #FFF;
+        margin-right: 50px;
+        height: 150px;
+      }
+
+    }
+
+
+
+
+}
+
+
+

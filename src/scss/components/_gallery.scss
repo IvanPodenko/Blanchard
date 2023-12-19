@@ -120,6 +120,7 @@
     .choices__list[aria-expanded]  {
       border: none;
       border-radius: 6px;
+      opacity: 0.5;
     }
 
     & .choices__list--dropdown .choices__item--selectable.is-highlighted,
@@ -288,9 +289,9 @@
       }
     }
 
-    & .btn-prev {
-      // margin-right: 10px;
-    }
+    // & .btn-prev {
+    //   margin-right: 10px;
+    // }
 
     & .btn-prev::before {
       left: calc(50% - 5px / 2);

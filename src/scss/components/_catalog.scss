@@ -26,6 +26,7 @@
 
   &__wrap {
     display: flex;
+    justify-content: space-between;
     // gap: 50px;
 
    &-title {                                        //левая секция
@@ -62,7 +63,6 @@
    }
 
    &-btn {
-
     position: relative;
     background-color: transparent;
     border: none;
@@ -84,10 +84,11 @@
       color: var(--black);
     }
 
-    &-open {
+    &-open {            // на 9й минуте изменения галочки
       position: absolute;
       right: 0;
       top: 25%;
+      flex-shrink: 0;
     }
    }
 
@@ -123,6 +124,8 @@
     &-img {
       border: 2px solid var(--nobel);
       padding: 12px;
+      margin-top: 25px;
+      margin-bottom: 25px;
     }
 
     &-right {
@@ -155,14 +158,35 @@
         color: var(--amethyst);
       }
     }
-
-
    }
-
-
-
-
-
   }
 
+  .ac.js-enabled .ac-panel {
+    visibility: hidden;
+  }
+
+  .ac.is-active .ac-panel {
+    visibility: visible;
+  }
+
+  .ac .ac-trigger::after {
+    content: none;
+  }
+
+  .ac-trigger {
+    margin: 0;
+    margin-bottom: -1px;
+  }
+
+  .ac-panel {
+    margin: 0;
+  }
+
+  .ac {
+    margin-top: 0;
+    border: none;
+    background-color: transparent;
+  }
 }
+
+

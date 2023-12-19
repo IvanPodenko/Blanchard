@@ -12,8 +12,21 @@
   }
 
   &__wrapper {
+    position: relative;
     display: flex;
     justify-content: space-between;
+
+    &-next {
+      position: absolute;
+      top: 46%;
+      right: -2%;
+    }
+
+    &-prev {
+      position: absolute;
+      top: 46%;
+      left: -2%;
+    }
   }
 
   &__list {
@@ -21,6 +34,11 @@
     width: 500px;
     min-height: 700px;
     border: 1px solid var(--very-light-grey);
+    padding-bottom: 43px;
+
+    &-one {
+      display: none;
+    }
 
 
     &-museums {
@@ -80,6 +98,7 @@
       font-weight: 400;
       line-height: 32px;
       padding-left: 50px;
+      // padding-bottom: 43px;
 
       &::after {
         content: '';

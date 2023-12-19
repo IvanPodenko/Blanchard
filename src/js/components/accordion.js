@@ -1,47 +1,50 @@
-import Accordion from 'accordion-js';
-// import 'accordion-js/dist/accordion.min.css';
+import Accordion from '../../../node_modules/accordion-js/dist/accordion';
 
-(() => {
-  new Accordion(".js-accordion-container", {
-    openOnInit: [0]
-  });
-})();
+
+new Accordion('.accordion-container');
+
+
+// (() => {
+//   new Accordion(".js-accordion-container", {
+//     openOnInit: [0]
+//   });
+// })();
 
 
 // Табы
-const params = {
-  tabsClass: "js-tab-btn",
-  wrap: "js-tabs-wrap",
-  content: "js-tab-content",
-  active: "active"
-};
+// const params = {
+//   tabsClass: "js-tab-btn",
+//   wrap: "js-tabs-wrap",
+//   content: "js-tab-content",
+//   active: "active"
+// };
 
-function setTabs(params) {
-  const tabBtns = document.querySelectorAll(`.${params.tabsClass}`);
+// function setTabs(params) {
+//   const tabBtns = document.querySelectorAll(`.${params.tabsClass}`);
 
-  function onTabClick(e) {
-    e.preventDefault();
-    const path = this.dataset.path;
-    const wrap = this.closest(`.${params.wrap}`);
-    const currentContent = wrap.querySelector(`.${params.content}[data-target="${path}"]`);
-    const contents = wrap.querySelectorAll(`.${params.content}`);
+//   function onTabClick(e) {
+//     e.preventDefault();
+//     const path = this.dataset.path;
+//     const wrap = this.closest(`.${params.wrap}`);
+//     const currentContent = wrap.querySelector(`.${params.content}[data-target="${path}"]`);
+//     const contents = wrap.querySelectorAll(`.${params.content}`);
 
-    contents.forEach((el) => {
-      el.classList.remove(params.active);
-    });
+//     contents.forEach((el) => {
+//       el.classList.remove(params.active);
+//     });
 
-    currentContent.classList.add(params.active);
+//     currentContent.classList.add(params.active);
 
-    tabBtns.forEach((el) => {
-      el.classList.remove(params.active);
-    });
+//     tabBtns.forEach((el) => {
+//       el.classList.remove(params.active);
+//     });
 
-    this.classList.add(params.active);
-  }
+//     this.classList.add(params.active);
+//   }
 
-  tabBtns.forEach(function (el) {
-    el.addEventListener("click", onTabClick);
-  });
-}
+//   tabBtns.forEach(function (el) {
+//     el.addEventListener("click", onTabClick);
+//   });
+// }
 
-setTabs(params);
+// setTabs(params);
