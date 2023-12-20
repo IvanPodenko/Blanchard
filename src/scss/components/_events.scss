@@ -4,7 +4,7 @@
     margin: 0;
     margin-bottom: 16px;
     color: var(--black);
-    font-family: Open Sans;
+    font-family: 'Open Sans';
     font-size: 48px;
     font-style: normal;
     font-weight: 400;
@@ -12,45 +12,36 @@
   }
 
   &__wrapper {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
+    // position: relative;
+    // display: flex;
+    // justify-content: space-between;
 
-    &-next {
-      position: absolute;
-      top: 46%;
-      right: -2%;
-    }
+    // &-next {
+    //   position: absolute;
+    //   top: 46%;
+    //   right: -2%;
+    // }
 
-    &-prev {
-      position: absolute;
-      top: 46%;
-      left: -2%;
-    }
+    // &-prev {
+    //   position: absolute;
+    //   top: 46%;
+    //   left: -2%;
+    // }
   }
 
   &__list {
-
-    width: 500px;
-    min-height: 700px;
     border: 1px solid var(--very-light-grey);
-    padding-bottom: 43px;
-
-    &-one {
-      display: none;
-    }
-
+    box-sizing: border-box;
 
     &-museums {
       display: block;
       width: 206px;
       color: var(--nobel);
-      font-family: Open Sans;
+      font-family: 'Open Sans';
       font-size: 12px;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
-      padding-left: 50px;
       margin-bottom: 13px;
 
       &-one {
@@ -58,46 +49,55 @@
       }
     }
 
+    &-inner {
+      padding: 13px 50px 50px 50px;
+      display: flex;
+      flex-direction: column;
+      min-height: 337px;
+
+    }
+
+    &-picture {
+      display: flex;
+    }
+
     &-subtitle {
-      width: 419px;
+
       margin: 0;
       color: var(--night-rider);
-      font-family: Open Sans;
+      font-family: 'Open Sans';
       font-size: 24px;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
-      padding-left: 50px;
       margin-bottom: 10px;
     }
 
     &-descr {
-      width: 422px;
       margin: 0;
       color: var(--night-rider);
-      font-family: Open Sans;
+      font-family: 'Open Sans';
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
       line-height: 32px;
-      padding-left: 50px;
-      margin-bottom: 66px;
+      // margin-bottom: 66px;
 
-      &-one {
-        width: 452px;
-        margin-bottom: 103px;
-      }
+      // &-one {
+      //   width: 452px;
+      //   margin-bottom: 103px;
+      // }
     }
 
     &-details {
       position: relative;
       color: var(--amethyst);
-      font-family: Open Sans;
+      font-family: 'Open Sans';
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
       line-height: 32px;
-      padding-left: 50px;
+      margin-top: auto;
       // padding-bottom: 43px;
 
       &::after {
@@ -106,9 +106,8 @@
         width: 88px;
         height: 1px;
         background-color: var(--amethyst);
-        padding-left: 50px;
         position: absolute;
-        left: 50px;
+        left: 0;
       }
     }
 
