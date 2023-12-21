@@ -5,15 +5,17 @@ const swiperEvents = new Swiper('.events__wrapper', {
   slidesPerView: 3,
   spaceBetween: 50,
 
+    navigation: {
+    nextEl: ".events__wrapper-btn-next",
+    prevEl: ".events__wrapper-btn-prev",
+  },
+
   // pagination: {
   //   el: ".gallery__right-pagination",
   //   type: "fraction",
   // },
 
-  // navigation: {
-  //   nextEl: ".btn-next",
-  //   prevEl: ".btn-prev",
-  // },
+
 
   // breakpoints: {
 
