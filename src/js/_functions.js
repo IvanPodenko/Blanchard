@@ -46,10 +46,10 @@ import { burger } from './functions/burger';
 
 
 // Подключение плагина для позиционирования тултипов
-// import { createPopper, right} from '@popperjs/core';
-// createPopper(el, tooltip, {
-//   placement: 'right'
-// });
+    // import { createPopper, right} from '@popperjs/core';
+    // createPopper('.projects__tooltip-btn', '.projects__tooltip-txt', {
+    //   placement: 'right'
+    // });
 
 // Подключение свайпера
 // import Swiper, { Navigation, Pagination } from 'swiper';

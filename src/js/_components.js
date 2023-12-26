@@ -6,6 +6,8 @@ import './components/search';
 import './components/accordion';
 import './components/events-swipper';
 import './components/projects-swipper';
+import './components/tooltip';
+import './components/map';
 
 
 
