@@ -1,0 +1,70 @@
+.modal {
+  padding: 0;
+
+  &__wrapper {
+    display: flex;
+    gap: 50px;
+
+    &-picture {
+      display: flex;
+    }
+  }
+
+  &__image {
+    min-width: 400px;
+    height: 500px;
+    object-fit: cover;
+  }
+
+  &__content {
+    padding-top: 121px;
+    max-width: 400px;
+
+
+    &-title {
+      margin: 0;
+      color: var(--night-rider);
+      font-family: Open Sans;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    &-subtitle {
+      margin: 0;
+      color: var(--night-rider);
+      font-family: Open Sans;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    &-date {
+      margin: 0;
+      color: var(--nobel);
+      font-family: Open Sans;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    &-descr {
+      margin: 0;
+      margin-top: 39px;
+      color: var(--night-rider);
+      font-family: Open Sans;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}
+
+
+
+
+

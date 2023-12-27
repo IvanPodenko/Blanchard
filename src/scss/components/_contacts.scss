@@ -91,21 +91,13 @@
     }
   }
 
-  &__wrap {
-    border-top: 1px solid lightgray;
-  }
+  // &__wrap {
+  //   border-top: 1px solid lightgray;
+  // }
 
   &__map {
-    position: relative;
+    border-top: 1px solid lightgray;
     height: 700px;
-
-    &-wrap {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
   }
 
   [class*="ground-pane"] {

@@ -1,58 +1,35 @@
-ymaps.ready(init);
-function init() {
-  const mapElem = document.querySelector("#map");
-  const myMap = new ymaps.Map(
-    "map",
-    {
-      center: [55.75846806898367, 37.60108849999989],
+import ymaps from 'ymaps';
+
+ymaps
+  .load('https://api-maps.yandex.ru/2.1/?apikey=fe250f75-7719-412f-a245-802cd13d0166&lang=ru_RU')
+  .then(maps => {
+    const map = new maps.Map('map', {
+      center: [55.758468, 37.601088],
       zoom: 14,
-      controls: ["geolocationControl", "zoomControl"]
-    },
-    {
-      suppressMapOpenBlock: true,
-      geolocationControlSize: "large",
-      geolocationControlPosition: { top: "300px", right: "20px" },
-      geolocationControlFloat: "none",
-      zoomControlSize: "small",
-      zoomControlFloat: "none",
-      zoomControlPosition: { top: "200px", right: "20px" }
-    }
-  );
+    });
 
-  if (window.matchMedia("(max-width: 1280px)").matches) {
-    if (Object.keys(myMap.controls._controlKeys).length) {
-      myMap.controls.remove('zoomControl');
-      myMap.controls.remove('geolocationControl');
-    }
-  }
 
-  myMap.behaviors.disable("scrollZoom");
+    // Создаем метку с помощью дополнительных параметров
+    const placemark = new maps.Placemark([55.758468, 37.601088], {
+        // Свойства
+        // Текст балуна
+        // balloonContent: 'Здесь может быть ваш текст',
+        // Текст всплывающей подсказки
+        // hintContent: 'И еще информация при наведении'
+      }, {
+        // Опции
+        // Свою иконку можно задать так:
+        iconLayout: 'default#image',
+        iconImageHref: 'img/teg-map.svg',
+        // Размеры метки
+        iconImageSize: [20, 20],
+        // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки)
+        // iconImageOffset: [-15, -42]
+    });
 
-  myMap.events.add("sizechange", function (e) {
-    if (window.matchMedia("(max-width: 1280px)").matches) {
-      if (Object.keys(myMap.controls._controlKeys).length) {
-        myMap.controls.remove('zoomControl');
-        myMap.controls.remove('geolocationControl');
-      }
-    } else {
-      if (!Object.keys(myMap.controls._controlKeys).length) {
-        myMap.controls.add('zoomControl');
-        myMap.controls.add('geolocationControl');
-      }
-    }
-  });
+    map.geoObjects.add(placemark);  // добавление метки и балуна на карту
 
-  const myPlacemark = new ymaps.Placemark(
-    [55.75846806898367, 37.60108849999989],
-    {},
-    {
-      iconLayout: "default#image",
-      iconImageHref: "https://img.icons8.com/office/2x/one-free.png",
-      iconImageSize: [40, 40],
-      iconImageOffset: [-20, -40]
-    }
-  );
+  })
+  .catch(error => console.log('Failed to load Yandex Maps', error));
 
-  myMap.geoObjects.add(myPlacemark);
-  myMap.container.fitToViewport();
-}
+

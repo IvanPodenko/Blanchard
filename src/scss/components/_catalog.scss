@@ -168,6 +168,7 @@
 
       &-right {
         max-width: 275px;
+        margin-left: 25px;
 
         &-title {
           font-family: Open Sans;
@@ -197,9 +198,10 @@
         }
       }
 
-      &-one {
-        display: flex;
-      }
+    }
+
+    &-flex {
+      display: flex;
     }
 
 

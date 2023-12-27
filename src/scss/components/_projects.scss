@@ -124,23 +124,30 @@
     }
 
     &__tooltip {
-      // border-radius: 25px;
-      // color: var(--black);
-      // border-color: var(--amethyst);
-      // background-color: transparent;
-      // width: 20px;
-      // height: 21px;
-      // padding: 0px;
-      border: none;
-      background-color: white;
+      display: inline-flex;
+      align-items:center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 13px;
+      border-radius: 25px;
+      color: var(--black);
+      width: 16px;
+      height: 16px;
+      padding: 0px;
+      border: 1px solid var(--amethyst);
     }
 
 }
 
 
 .tippy-box[data-theme~='test-tooltip'] {
-  background-color: tomato;
-  color: yellow;
+  background-color:var(--studio);
+  border-radius: 5px;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
 }
 
 
