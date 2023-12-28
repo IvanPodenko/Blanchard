@@ -89,6 +89,20 @@
       flex-direction: column;
       min-height: 400px;
 
+      // @include tablet {
+      //   min-height: 683px;
+      // }
+
+      @include tablet-one {
+        padding: 13px 34px 50px 34px;
+        min-height: 571px;
+      }
+
+      @include small-tablet {
+        min-height: 350px;
+      }
+
+
     }
 
     &-picture {
@@ -144,6 +158,14 @@
         left: 0;
       }
     }
+
+    &-image {
+
+      @include small-tablet{
+        width: 100%;
+      }
+   }
+
 
   }
 }

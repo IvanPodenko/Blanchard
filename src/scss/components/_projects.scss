@@ -117,6 +117,14 @@
         object-fit: contain;
       }
 
+      @include for-desktop {
+        max-width: 818px;
+      }
+
+      @include small-tablet {
+        max-width: 195px;
+      }
+
     }
 
     & .projects__swiper-container {

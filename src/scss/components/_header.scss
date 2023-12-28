@@ -30,6 +30,15 @@
           // margin-left: 24px;
         }
       }
+
+      @include tablet {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      @include mobile {
+        padding: 0 15px;
+      }
     }
 
     &-link {
@@ -50,16 +59,17 @@
         & {
           position: absolute;
           left: 35%;
+          width: 107px;
           // top: 7%;
         }
       }
 
-      @include small-mobile {
-        & {
-          width: 107px;
+      // @include small-mobile {
+      //   & {
+      //     // width: 107px;
 
-        }
-      }
+      //   }
+      // }
 
     }
 

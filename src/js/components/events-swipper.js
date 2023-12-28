@@ -2,7 +2,7 @@ import Swiper, { Navigation } from 'swiper';
 
 const swiperEvents = new Swiper('.events__wrapper', {
   modules: [Navigation],
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 50,
 
     navigation: {
@@ -17,7 +17,19 @@ const swiperEvents = new Swiper('.events__wrapper', {
 
 
 
-  // breakpoints: {
+  breakpoints: {
+
+      768: {
+      slidesPerView: 2,
+      spaceBetween: 38
+    },
+
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 34
+      },
+
+  }
 
   // //  320: {
   // //     slidesPerView: 1,

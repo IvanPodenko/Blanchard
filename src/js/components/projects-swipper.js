@@ -2,7 +2,7 @@ import Swiper, { Navigation } from 'swiper';
 
 const swiperEvents = new Swiper('.projects__partners', {
   modules: [Navigation],
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 50,
   loop: true,
 
@@ -11,13 +11,18 @@ const swiperEvents = new Swiper('.projects__partners', {
       prevEl: ".projects__partners-button-prev",
     },
 
-    // breakpoints: {
+    breakpoints: {
 
-    //   1000: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 50
-    //   }
-    // }
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 50
+      },
+
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 50
+      },
+    }
 
   }
 )

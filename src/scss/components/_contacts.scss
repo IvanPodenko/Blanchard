@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: space-between;
     padding-bottom: 65px;
-    
+
 
     @include big-desktop {
       display: inline-block;
@@ -23,6 +23,9 @@
 
   &__left {
 
+    @include big-desktop {
+      margin-bottom: 30px;
+    }
 
 
     &-title {
@@ -46,9 +49,14 @@
 
   }
 
+  &__center {
+
+    @include big-desktop {
+      margin-bottom: 30px;
+    }
+  }
+
   &__form {
-
-
 
     &-input {
       color: var(--nobel);
@@ -67,6 +75,10 @@
       &:hover {
         background-color: var(--nobel);
       }
+
+      @include small-tablet {
+        margin-bottom: 10px;
+      }
     }
 
     &-btn {
@@ -83,6 +95,10 @@
       border-radius: 100px;
       border: 2px solid var(--amethyst);
       background: var(--white);
+
+      @include tablet-one {
+        margin-bottom: 10px;
+      }
     }
   }
 
@@ -97,6 +113,9 @@
       font-weight: 600;
       line-height: 32px;
 
+      @include big-desktop {
+        margin-bottom: 6px;
+      }
 
     }
 

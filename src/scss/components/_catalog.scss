@@ -30,8 +30,16 @@
     justify-content: space-between;
     // gap: 50px;
 
+    @include tablet {
+      flex-direction: column-reverse;
+    }
+
     &-left {
       margin-right: 50px;
+
+      @include tablet {
+        margin: 0;
+      }
     }
 
    &-title {                                        //левая секция
@@ -72,7 +80,7 @@
    }
 
    &-item {
-    margin-top: -1px;
+    // margin-top: -1px;
 
     &:hover {
       border-color: var(--studio);
@@ -83,12 +91,18 @@
     position: relative;
     background-color: transparent;
     border: none;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
+    // border-top: 1px solid;
+    border-bottom: 1px solid var(--black);
     // margin-top: -1px;
     width: 800px;
     text-align: left;
     min-height: 114px;
+    margin-bottom: -1px;
+
+
+    &:first-of-type {
+      border-top: 1px solid var(--black);
+    }
 
     &:hover {
       border-color: var(--studio);
@@ -123,7 +137,10 @@
          }
       }
 
+    }
 
+    @include tablet {
+      width: 100%;
     }
 
     &-one {
@@ -163,8 +180,8 @@
       // padding-top: 25px;
       // padding-bottom: 25px;                        // список художников
       // display: flex;
-      margin-bottom: -1px;
-      margin-top: -1px;
+      // margin-bottom: -1px;
+      // margin-top: -1px;
       gap: 24px;
       overflow: hidden;
 
@@ -232,6 +249,8 @@
 
     }
 
+
+
     &-flex {
       display: flex;
     }
@@ -273,6 +292,10 @@
     //   background-color: transparent;
     // }
 
+
+    &__image {
+      width: 100%;
+    }
 }
 
 
