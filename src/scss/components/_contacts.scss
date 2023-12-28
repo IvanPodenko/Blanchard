@@ -12,18 +12,18 @@
     align-items: center;
     justify-content: space-between;
     padding-bottom: 65px;
+    
 
-    @include big-desktop-one {
-      display: block;
+    @include big-desktop {
+      display: inline-block;
     }
+
   }
 
 
   &__left {
 
-    @include big-desktop-one {
-      margin-bottom: 20px;
-    }
+
 
     &-title {
       margin: 0;
@@ -48,9 +48,7 @@
 
   &__form {
 
-    @include big-desktop-one {
-      margin-bottom: 30px;
-    }
+
 
     &-input {
       color: var(--nobel);
@@ -99,9 +97,7 @@
       font-weight: 600;
       line-height: 32px;
 
-      @include big-desktop-one {
-        margin-bottom: 10px;
-      }
+
     }
 
     &-link {

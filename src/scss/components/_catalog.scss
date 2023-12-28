@@ -64,9 +64,6 @@
 
    &-right {                             // АДАПТИВ !!!!!!!!!!!!!!!
 
-    @include big-desktop-one {
-      width: 50%;
-    }
    }
 
    &-list {                             // правая секция

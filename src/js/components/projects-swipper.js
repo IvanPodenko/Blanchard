@@ -13,10 +13,10 @@ const swiperEvents = new Swiper('.projects__partners', {
 
     // breakpoints: {
 
-    //   500: {
+    //   1000: {
     //     slidesPerView: 2,
     //     spaceBetween: 50
-    //   },
+    //   }
     // }
 
   }
