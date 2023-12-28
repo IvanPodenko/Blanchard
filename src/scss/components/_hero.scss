@@ -37,6 +37,7 @@
     // padding-bottom: 133px;
 
     &-title {
+      margin: 0;
       font-family: "Open Sans";
       font-style: normal;
       font-weight: 700;
@@ -80,6 +81,7 @@
     }
 
     &-btn {
+      display: inline-block;
       font-family: "Open Sans";
       font-style: normal;
       font-weight: 700;

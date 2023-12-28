@@ -62,6 +62,13 @@
     max-width: 750px;
    }
 
+   &-right {                             // АДАПТИВ !!!!!!!!!!!!!!!
+
+    @include big-desktop-one {
+      width: 50%;
+    }
+   }
+
    &-list {                             // правая секция
     list-style: none;
     margin: 0;
@@ -69,6 +76,10 @@
 
    &-item {
     margin-top: -1px;
+
+    &:hover {
+      border-color: var(--studio);
+    }
    }
 
    &-btn {
@@ -86,12 +97,36 @@
       border-color: var(--studio);
 
       & .catalog__wrap-btn-date {
-       color: var(--studio);
+       color: var(--amethyst);
       }
 
       & .catalog__wrap-btn-open path {
         fill: var(--mauve);
       }
+
+                                                                      // ФОКУС НЕ СРАБАТЫВАЕТ
+
+      &:focus-visible:not(:hover):not(:active)::after {
+        content: "";
+        position:absolute;
+        left: -7px;
+        top: -3px;
+        bottom: -3px;
+        width: calc(100% + 14px);
+        background-color: var(--studio);
+        z-index: -1;
+        outline: none;
+        animation:scale-up-center .4s cubic-bezier(.39,.575,.565,1.000) both
+      }
+
+      &:active {
+
+        & .catalog__wrap-btn-date {
+          color: var(--studio);
+         }
+      }
+
+
     }
 
     &-one {

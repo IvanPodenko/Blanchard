@@ -45,6 +45,11 @@
         background-color: var(--mauve);
       }
 
+      &:focus {                                            //ТОЖE НЕ СРАБАОТЫВАЕТ
+        border-color: var(--amethyst);
+        outline: none;
+      }
+
       &:active {
         background-color: var(--mauve);
         border: 2px solid var(--amethyst);

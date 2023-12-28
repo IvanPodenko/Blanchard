@@ -148,34 +148,34 @@
 
       cursor: pointer;
 
-      &--field:checked ~ &--visible::before {
+      &-field:checked ~ &-visible::before {
         opacity: 1;
       }
 
-      &--field:checked ~ &--visible {
+      &-field:checked ~ &-visible {
         border-color: var(--wisteria);
       }
 
-      &--field:checked ~ &--content {
+      &-field:checked ~ &-content {
         color: var(--wisteria);
         transition: color 0.3s ease-in-out;
       }
 
 
-      &--field:focus ~ &--visible::before {
+      &-field:focus ~ &-visible::before {
         opacity: 1;
       }
 
-      &--field:focus ~ &--visible {
+      &-field:focus ~ &-visible {
         border-color: var(--wisteria);
       }
 
-      &--field:focus ~ &--content {
+      &-field:focus ~ &-content {
         color: var(--wisteria);
         transition: color 0.3s ease-in-out;
       }
 
-      &--visible {
+      &-visible {
         position: relative;
         display: inline-block;
         width: 12px;
@@ -199,7 +199,7 @@
         }
       }
 
-      &--content {
+      &-content {
         font-family: "Open Sans";
         font-style: normal;
         font-weight: 400;
@@ -209,11 +209,11 @@
       }
 
 
-      &:hover .gallery__custom-checkbox--content {
+      &:hover .gallery__custom-checkbox-content {
         color: var(--wisteria);
       }
 
-      &:hover .gallery__custom-checkbox--visible {
+      &:hover .gallery__custom-checkbox-visible {
         border-color: var(--wisteria);
       }
     }

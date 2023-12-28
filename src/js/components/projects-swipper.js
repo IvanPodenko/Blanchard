@@ -11,5 +11,13 @@ const swiperEvents = new Swiper('.projects__partners', {
       prevEl: ".projects__partners-button-prev",
     },
 
+    // breakpoints: {
+
+    //   500: {
+    //     slidesPerView: 2,
+    //     spaceBetween: 50
+    //   },
+    // }
+
   }
 )

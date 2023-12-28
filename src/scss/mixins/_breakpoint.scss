@@ -12,11 +12,24 @@
   }
 }
 
+@mixin big-desktop-one {
+  @media (max-width: (1900px)) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (max-width: (1280px)) {
     @content;
   }
 }
+
+// @mixin tablet-one {
+//   @media (max-width: (1900px)) {
+//     @content;
+//   }
+// }
+
 
 @mixin small-tablet {
   @media (max-width: (768px)) {

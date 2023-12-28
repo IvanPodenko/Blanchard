@@ -13,6 +13,25 @@
 
     &-vk {
       margin-right: 20px;
+
+      &:hover path {
+        fill: var(--white);
+      }
+
+      &:active path {
+        fill: var(--amethyst);
+      }
+    }
+
+    &-ok {
+
+      &:hover path {
+        fill: var(--white);
+      }
+
+      &:active path {
+        fill: var(--amethyst);
+      }
     }
   }
 
