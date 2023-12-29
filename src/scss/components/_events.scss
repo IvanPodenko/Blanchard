@@ -32,6 +32,7 @@
       opacity: 1;
       visibility: visible;
       transition: opacity .3s ease-in-out, visibility .3s ease-in-out ;
+      outline: none;
 
       &-next {
         right: 22px;
@@ -45,8 +46,8 @@
         background-color: var(--mauve);
       }
 
-      &:focus {                                            //ТОЖE НЕ СРАБАОТЫВАЕТ
-        border-color: var(--amethyst);
+      &:focus-visible {
+        border: 1px solid var(--amethyst);                                         //ТОЖE НЕ СРАБАОТЫВАЕТ
         outline: none;
       }
 
@@ -85,6 +86,7 @@
     &-inner {
       padding: 13px 50px 50px 50px;
       display: flex;
+      align-items: flex-start;
       justify-content: space-between;
       flex-direction: column;
       min-height: 400px;
@@ -146,6 +148,8 @@
       font-weight: 400;
       line-height: 32px;
       margin-top: auto;
+      outline: none;
+
 
 
       &::after {
@@ -156,6 +160,11 @@
         background-color: var(--amethyst);
         position: absolute;
         left: 0;
+      }
+
+      &:focus-visible {
+        padding: 3px;
+        border: 2px solid var(--amethyst);
       }
     }
 

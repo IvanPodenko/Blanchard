@@ -72,6 +72,11 @@
           background-color: var(--mauve);
         }
 
+        &:focus-visible {
+          border: 1px solid var(--amethyst);                                       
+          outline: none;
+        }
+
         &:active {
           background-color: var(--mauve);
           border: 2px solid var(--amethyst);

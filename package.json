@@ -61,6 +61,7 @@
     "graph-modal": "^1.0.4",
     "graph-tabs": "^1.0.0",
     "gulp-imagemin": "^7.1.0",
+    "imask": "^7.3.0",
     "inputmask": "^5.0.7",
     "just-validate": "^3.3.3",
     "rellax": "^1.12.1",

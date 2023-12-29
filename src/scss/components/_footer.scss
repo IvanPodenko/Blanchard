@@ -9,36 +9,32 @@
       align-items: center;
   }
 
-  &__link {
-
-    &-vk {
-      margin-right: 20px;
-
-      &:hover path {
-        fill: var(--white);
-      }
-
-      &:active path {
-        fill: var(--amethyst);
-      }
-    }
-
-    &-ok {
-
-      &:hover path {
-        fill: var(--white);
-      }
-
-      &:active path {
-        fill: var(--amethyst);
-      }
-    }
+  &__wrap {
+    display: flex;
+    gap: 20px;
   }
 
 
+  &__link {
+    outline: none;
+
+    & svg path {
+      transition: fill .3s ease-in-out;
+    }
+
+    &:hover svg path,
+    &:focus-visible svg path {
+      fill: var(--white);
+    }
+
+    &:active svg path {
+      fill: var(--amethyst);
+    }
 
 
 
+
+  }
 
 }
 

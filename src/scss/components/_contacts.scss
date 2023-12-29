@@ -2,7 +2,6 @@
 
   border-bottom: 1px solid var(--very-light-grey);
   border-top: 1px solid var(--very-light-grey);
-  padding-bottom: 45px;
   padding-top: 45px;
 
 
@@ -58,9 +57,29 @@
 
   &__form {
 
+    display: flex;
+    gap: 20px;
+
+    &-label {
+      position: relative;
+      display: inline-block;
+
+      & .just-validate-error-label {
+        position: absolute;
+        top: -22px;
+        left: 24px;
+        color: #D11616;
+        font-family: "Open Sans";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+
     &-input {
       color: var(--nobel);
-      font-family: Open Sans;
+      font-family: "Open Sans";
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
@@ -70,7 +89,8 @@
       border-radius: 100px;
       border: 1px solid #333;
       padding: 9px 43px 9px 24px;
-      margin-right: 20px;
+      transition: border-color .3 ease-in-out;
+
 
       &:hover {
         background-color: var(--nobel);
@@ -79,6 +99,10 @@
       @include small-tablet {
         margin-bottom: 10px;
       }
+    }
+
+    & .just-validate-error-field {
+      border-color: #D11616;
     }
 
     &-btn {
@@ -119,33 +143,33 @@
 
     }
 
+    &-wrap {
+      display: flex;
+      gap: 20px;
+    }
+
     &-link {
 
+      display: flex;
+      border: 1px solid transparent;
+      border-radius: 50px;
+      outline: none;
+      transition: opacity .3s ease-in-out, border .3s ease-in-out ;
 
-      &-one {
-        margin-right: 20px;
 
-        &:hover {
-          opacity: 0.5;
-        }
-
-        &:active {
-          border-radius: 50px;
-          border: 3px solid var(--amethyst);
-        }
+      &:hover {
+        opacity: 0.5;
       }
 
-      &-two {
-
-        &:hover {
-          opacity: 0.5;
-        }
-
-        &:active {
-          border-radius: 50px;
-          border: 3px solid var(--amethyst);
-        }
+      &:active {
+        border: 1px solid var(--amethyst);
       }
+
+      &:focus-visible {
+        opacity: 0.5;
+      }
+
+
 
 
     }
