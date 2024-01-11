@@ -17,6 +17,7 @@
 
   &__wrapper {
     position: relative;
+    margin-bottom: 30px;
 
     &-btn {
       display: flex;
@@ -47,7 +48,7 @@
       }
 
       &:focus-visible {
-        border: 1px solid var(--amethyst);                                         //ТОЖE НЕ СРАБАОТЫВАЕТ
+        border: 1px solid var(--amethyst);
         outline: none;
       }
 
@@ -59,6 +60,10 @@
       &:disabled {
         opacity: 0;
         visibility: hidden;
+      }
+
+      @include tablet-one {
+        display: none;
       }
     }
   }
@@ -176,6 +181,23 @@
    }
 
 
+  }
+
+  &__pagination {
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    & .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background-color: var(--dim-gray);
+    }
+
+    @include tablet-one {
+      display: flex;
+    }
   }
 }
 

@@ -1,7 +1,7 @@
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Navigation, Pagination } from 'swiper';
 
 const swiperEvents = new Swiper('.events__wrapper', {
-  modules: [Navigation],
+  modules: [Navigation, Pagination],
   slidesPerView: 1,
   spaceBetween: 50,
 
@@ -10,10 +10,10 @@ const swiperEvents = new Swiper('.events__wrapper', {
     prevEl: ".events__wrapper-btn-prev",
   },
 
-  // pagination: {
-  //   el: ".gallery__right-pagination",
-  //   type: "fraction",
-  // },
+    pagination: {
+      el: ".events__pagination",
+      clickable: true,
+    },
 
 
 

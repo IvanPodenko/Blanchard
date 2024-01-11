@@ -44,6 +44,7 @@
       justify-content: center;
       max-width: 1450px;
       height: 150px;
+      padding: 0 50px;
 
       &-button {
         display: flex;
@@ -73,7 +74,7 @@
         }
 
         &:focus-visible {
-          border: 1px solid var(--amethyst);                                       
+          border: 1px solid var(--amethyst);
           outline: none;
         }
 
@@ -122,18 +123,19 @@
         object-fit: contain;
       }
 
-      @include for-desktop {
-        max-width: 818px;
-      }
+      // @include for-desktop {
+      //   max-width: 818px;
+      // }
 
-      @include small-tablet {
-        max-width: 195px;
-      }
+      // @include small-tablet {
+      //   max-width: 195px;
+      // }
 
     }
 
     & .projects__swiper-container {
       position: relative;
+      // max-width: 1450px;
     }
 
     &__tooltip {
@@ -160,6 +162,8 @@
     }
 
 }
+
+
 
 
 .tippy-box[data-theme~='test-tooltip'] {

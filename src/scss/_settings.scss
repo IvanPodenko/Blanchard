@@ -88,10 +88,10 @@ a {
   padding-left: var(--container-offset);
   max-width: var(--container-width);
 
-  @include tablet {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
+  // @include tablet {
+  //   padding-left: 50px;
+  //   padding-right: 50px;
+  // }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {

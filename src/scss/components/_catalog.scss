@@ -42,139 +42,144 @@
       }
     }
 
-   &-title {                                        //левая секция
-    font-family: Open Sans;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    color:var(--black);
-   }
-
-   &-date {
-    font-family: Open Sans;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    color: var(--nobel);
-   }
-
-   &-text {
-    font-family: Open Sans;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 32px;
-    color: var(--black);
-    max-width: 750px;
-   }
-
-   &-right {                             // АДАПТИВ !!!!!!!!!!!!!!!
-
-   }
-
-   &-list {                             // правая секция
-    list-style: none;
-    margin: 0;
-   }
-
-   &-item {
-    // margin-top: -1px;
-
-    &:hover {
-      border-color: var(--studio);
-    }
-   }
-
-   &-btn {
-    position: relative;
-    background-color: transparent;
-    border: none;
-    // border-top: 1px solid;
-    border-bottom: 1px solid var(--black);
-    // margin-top: -1px;
-    width: 800px;
-    text-align: left;
-    min-height: 114px;
-    margin-bottom: -1px;
-
-
-    &:first-of-type {
-      border-top: 1px solid var(--black);
-    }
-
-    &:hover {
-      border-color: var(--studio);
-
-      & .catalog__wrap-btn-date {
-       color: var(--amethyst);
-      }
-
-      & .catalog__wrap-btn-open path {
-        fill: var(--mauve);
-      }
-
-                                                                      // ФОКУС НЕ СРАБАТЫВАЕТ
-
-      &:focus-visible:not(:hover):not(:active)::after {
-        content: "";
-        position:absolute;
-        left: -7px;
-        top: -3px;
-        bottom: -3px;
-        width: calc(100% + 14px);
-        background-color: var(--studio);
-        z-index: -1;
-        outline: none;
-        animation:scale-up-center .4s cubic-bezier(.39,.575,.565,1.000) both
-      }
-
-      &:active {
-
-        & .catalog__wrap-btn-date {
-          color: var(--studio);
-         }
-      }
-
-    }
-
-    @include tablet {
-      width: 100%;
-    }
-
-    &-one {
-      // margin-bottom: -1px;
-    }
-
-
-    &-date {
+    &-title {
+      //левая секция
       font-family: Open Sans;
       font-size: 24px;
       font-style: normal;
       font-weight: 600;
-      line-height: 32px;
+      line-height: normal;
       color: var(--black);
     }
 
-    &-open {            // на 9й минуте изменения галочки
-      position: absolute;
-      right: 0;
-      top: 25%;
-      flex-shrink: 0;
-      transition: fill .3 ease-in-out;
+    &-date {
+      font-family: Open Sans;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      color: var(--nobel);
+    }
 
-      &:active {
-      fill: var(--mauve);
-      transform: rotate(180deg);
+    &-text {
+      font-family: Open Sans;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 32px;
+      color: var(--black);
+      max-width: 750px;
+    }
+
+    &-right {
+    }
+
+    &-list {
+      // правая секция
+      list-style: none;
+      margin: 0;
+    }
+
+    &-item {
+      &:focus-visible {
+        outline: none;
       }
     }
-   }
 
-   &-inner {
-     padding-top: 25px;
-    padding-bottom: 25px;
-   }
+    &-item.is-active svg {
+      transform: rotate(180deg);
+    }
+
+    &-item svg {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &-btn {
+      position: relative;
+      background-color: transparent;
+      border: none;
+      // border-top: 1px solid;
+      border-bottom: 1px solid var(--very-light-grey);
+      width: 800px;
+      text-align: left;
+      min-height: 114px;
+      margin-bottom: -1px;
+      // margin-top: -1px;
+      transition: border-color 0.3s ease-in-out, color 0.5s ease-in-out,
+        fill 0.5s ease-in-out; // НЕ СРАБАТЫВАЕТ ПЛАВНОСТЬ
+
+      &:first-of-type {
+
+        border-top: 1px solid var(--very-light-grey);
+      }
+
+      &:hover {
+        border-color: var(--studio);
+
+        & .catalog__wrap-btn-date {
+          color: var(--amethyst);
+        }
+
+        & .catalog__wrap-btn-open path {
+          fill: var(--mauve);
+        }
+
+        &:focus-visible:not(:hover):not(:active)::after {
+          content: "";
+          position: absolute;
+          left: -7px;
+          top: -3px;
+          bottom: -3px;
+          width: calc(100% + 14px);
+          background-color: var(--studio);
+          z-index: -1;
+          outline: none;
+          animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+            both;
+        }
+
+        &:active {
+          & .catalog__wrap-btn-date {
+            color: var(--studio);
+          }
+        }
+      }
+
+      @include tablet {
+        width: 100%;
+      }
+
+      &-one {
+        // margin-bottom: -1px;
+      }
+
+      &-date {
+        font-family: Open Sans;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 32px;
+        color: var(--black);
+      }
+
+      &-open {
+        position: absolute;
+        right: 0;
+        top: 25%;
+        flex-shrink: 0;
+        transition: fill 0.3 ease-in-out;
+
+        &:active {
+          fill: var(--mauve);
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &-inner {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
 
     &-content {
       // padding-top: 25px;
@@ -200,19 +205,42 @@
         font-weight: 400;
         line-height: 32px;
         color: var(--black);
+        transition: border-bottom 0.3s ease-in-out,
+          background-color 0.3s ease-in-out;
+
+        // &:hover {
+        //   border-bottom: 2px solid var(--amethyst);
+        // }
+
+        &:active {
+          background-color: var(--amethyst);
+        }
       }
 
       &-btn {
+        padding: 0;
         background-color: transparent;
         border: none;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom 0.3s ease-in-out,
+          background-color 0.3s ease-in-out;
+
+        &:hover {
+          outline: none;
+          border-bottom: 2px solid var(--amethyst);
+        }
+
+        &:focus-visible {
+          outline: none;
+          background-color: var(--amethyst);
+        }
       }
 
-        &-img {
+      &-img {
         border: 2px solid var(--nobel);
         padding: 12px;
         margin-top: 25px;
         margin-bottom: 25px;
-
       }
 
       &-right {
@@ -246,56 +274,50 @@
           color: var(--amethyst);
         }
       }
-
     }
-
-
 
     &-flex {
       display: flex;
     }
-
-
   }
 
-    .ac.js-enabled .ac-panel {
-      visibility: hidden;
-    }
+  .ac.js-enabled .ac-panel {
+    visibility: hidden;
+  }
 
-    .ac.is-active .ac-panel {
-      border-bottom: 1px solid;
-      visibility: visible;
-    }
+  & .ac.is-active .ac-panel {
+    border-bottom: 1px solid var(--dim-gray);
+    visibility: visible;
+  }
 
-    .ac .ac-trigger::after {
-      content: none;
-    }
+  .ac .ac-trigger::after {
+    content: none;
+  }
 
-    .ac-trigger {
-      // margin: 0;
-      // margin-bottom: -1px;
-    }
+  & .ac-trigger {
+    // margin: 0;
+    margin-bottom: -1px;
+  }
 
-    .ac-panel {
-      // margin: 0;
-    }
+  .ac-panel {
+    // margin: 0;
+  }
 
-    .ac {
-      // margin-top: -1px;
-      border: none;
-      background-color: transparent;
-    }
+  & .ac {
+    margin-bottom: -1px;
+    border: none;
+    background-color: transparent;
+  }
 
-    //   .catalog .ac{
-    //   margin-top: 0px;
-    //   border: none;
-    //   background-color: transparent;
-    // }
+  //   .catalog .ac{
+  //   margin-top: 0px;
+  //   border: none;
+  //   background-color: transparent;
+  // }
 
-
-    &__image {
-      width: 100%;
-    }
+  &__image {
+    width: 100%;
+  }
 }
 
 
