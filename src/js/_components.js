@@ -9,6 +9,7 @@ import './components/projects-swipper';
 import './components/tooltip';
 import './components/map';
 import './components/validate';
+import './components/catalog-tab';
 
 
 
