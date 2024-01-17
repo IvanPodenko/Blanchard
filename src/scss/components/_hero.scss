@@ -29,7 +29,7 @@
   &__content {
     // position: relative;
     max-width: 597px;
-    padding: 140px 0px;
+    padding: 132px 0px;
     // max-width: 597px;
     // padding-right: 20px;
     // margin-left: 50px;
@@ -44,7 +44,7 @@
       font-size: 72px;
       line-height: 98px;
       color: var(--white);
-      margin-bottom: 0;
+      margin-bottom: -2px;
 
       &-hidden {
         display: none;
@@ -76,7 +76,9 @@
       }
 
       @include mobile {
+        font-size: 12px;
         max-width: 547px;
+        margin-bottom: 20px;
       }
     }
 
@@ -108,12 +110,18 @@
         border: 3px solid var(--mauve);
         background-color: var(--studio);
       }
+
+      @include mobile {
+        font-size: 12px;
+        padding: 11px 16px 14px 19px;
+      }
     }
 
     @include mobile {
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding-top: 40px;
     }
   }
 }

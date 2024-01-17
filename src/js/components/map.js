@@ -6,6 +6,7 @@ ymaps
     const map = new maps.Map('map', {
       center: [55.758468, 37.601088],
       zoom: 14,
+      controls: ["geolocationControl", "zoomControl"]
     });
 
 

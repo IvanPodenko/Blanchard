@@ -86,6 +86,8 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: nowrap;
+      // overflow-y: auto;
 
       @include tablet {
         & {
@@ -101,6 +103,8 @@
           transition: transform .3s ease;
         }
       }
+
+
 
       &.menu--active {
         position: absolute;
@@ -122,17 +126,25 @@
       &-list {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
-        max-width: 784px;
+        // flex-wrap: wrap;
+        max-width: 991px;
         padding-top: 37px;
         padding-bottom: 37px;
+        padding-right: 239px;
+        width: 100%;
 
         @include tablet {
           & {
-          display: flex;
-          flex-direction: column;
-          padding-top: 10%;
+          // display: flex;
+          // flex-direction: column;
+          // padding-top: 10%;
           padding-left: 50px;
+          width: 100%;
+          overflow-y: auto;
+          height: 100%;
+          display: block;
+          /* padding-top: 100px; */
+          margin-top: 100px;
           }
         }
 
@@ -146,7 +158,7 @@
       &-item {
 
       &:not(:last-child) {
-        margin-right: 68px;
+        // margin-right: 68px;
 
           @include mobile {
             padding-bottom: 5px;
@@ -287,7 +299,7 @@
         font-size: 18px;
         line-height: 25px;
         color: var(--white);
-        padding-left: 7px;
+        padding-left: 2px;
         transition: color .3s ease-in-out;
 
 
@@ -332,8 +344,9 @@
     &-list {
       display: flex;
       justify-content: space-between;
-      width: 70%;
+      width: 66%;
       flex-wrap: wrap;
+      padding-right: 15px;
     }
 
     &-item {
@@ -391,8 +404,8 @@
         height: 7px;
         border-top: 1px solid;
         border-right: 1px solid;
-        margin-left: 10px;
-        margin-top: -3px;
+        margin-left: 5px;
+        margin-top: -2px;
         transform: rotate(135deg);
         transition: transform 0.5s ease;
         transform-origin: cente;
@@ -729,6 +742,8 @@
 
     &-bottom {
       display: flex;
+      padding-right: 28px;
+      padding-bottom: 18px;
       // align-items: center;
     }
 
@@ -740,6 +755,7 @@
       outline: none;
       color: var(--white);
       border-bottom: 1px solid var(--white);
+      // width: 220px;
       background-color: transparent;
       transition: border-bottom .3s ease-in-out;
 

@@ -31,6 +31,11 @@
     // gap: 50px;
 
     @include tablet {
+      gap: 50px;
+    }
+
+    @include small-tablet {
+      display: flex;
       flex-direction: column-reverse;
     }
 
@@ -98,20 +103,19 @@
       position: relative;
       background-color: transparent;
       border: none;
-      // border-top: 1px solid;
+      border-top: 1px solid transparent;
       border-bottom: 1px solid var(--very-light-grey);
       width: 800px;
       text-align: left;
       min-height: 114px;
       margin-bottom: -1px;
       // margin-top: -1px;
-      transition: border-color 0.3s ease-in-out, color 0.5s ease-in-out,
-        fill 0.5s ease-in-out; // НЕ СРАБАТЫВАЕТ ПЛАВНОСТЬ
+      transition: border-color .5s ease-in-out;
 
       &:first-of-type {
-
-        border-top: 1px solid var(--very-light-grey);
+        // border-top: 1px solid var(--very-light-grey);
       }
+
 
       &:hover {
         border-color: var(--studio);
@@ -160,6 +164,7 @@
         font-weight: 600;
         line-height: 32px;
         color: var(--black);
+        transition: color .5s ease-in-out;
       }
 
       &-open {
@@ -167,7 +172,16 @@
         right: 0;
         top: 25%;
         flex-shrink: 0;
-        transition: fill 0.3 ease-in-out;
+        transition: transform 0.5s ease-in-out;
+
+        & path {
+          // background-color: transparent;
+          transition: fill .3s ease-in-out;
+        }
+
+        // &:hover {
+        //   fill: var(--mauve);
+        // }
 
         &:active {
           fill: var(--mauve);
@@ -189,6 +203,7 @@
       // margin-top: -1px;
       gap: 24px;
       overflow: hidden;
+      // margin-bottom: -1px;
 
       &-list {
         column-count: 3;
@@ -222,7 +237,7 @@
         border: none;
         border-bottom: 2px solid transparent;
         transition: border-bottom 0.3s ease-in-out,
-          background-color 0.3s ease-in-out;
+        background-color 0.3s ease-in-out;
 
         &:hover {
           outline: none;
@@ -284,18 +299,18 @@
     visibility: hidden;
   }
 
-  & .ac.is-active .ac-panel {
-    border-bottom: 1px solid var(--dim-gray);
+  .ac.is-active .ac-panel {
+    // border-bottom: 1px solid var(--dim-gray);
     visibility: visible;
   }
 
   .ac .ac-trigger::after {
-    content: none;
+    // content: none;
   }
 
   & .ac-trigger {
     // margin: 0;
-    margin-bottom: -1px;
+    // margin-bottom: -1px;
   }
 
   .ac-panel {
@@ -303,9 +318,9 @@
   }
 
   & .ac {
-    margin-bottom: -1px;
-    border: none;
-    background-color: transparent;
+    // margin-bottom: -1px;
+    // border: none;
+    // background-color: transparent;
   }
 
   //   .catalog .ac{
@@ -381,8 +396,6 @@
     visibility: visible;
     position: relative;
     opacity: 1;
-    -webkit-transform: none;
-    -ms-transform: none;
     transform: none;
   }
 
@@ -393,6 +406,7 @@
   & .span-active {
     color: white;
   }
+
 
 }
 
