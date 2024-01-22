@@ -1,8 +1,8 @@
 .catalog {
-  margin-bottom: 40px;
+  // margin-bottom: 40px;
 
   &__container {
-    // padding-top: 80px;
+    padding-top: 31px;
   }
 
   &__title {
@@ -23,6 +23,7 @@
     line-height: 32px;
     color: var(--black);
     max-width: 1080px;
+    margin-bottom: 39px;
   }
 
   &__wrap {
@@ -55,6 +56,7 @@
       font-weight: 600;
       line-height: normal;
       color: var(--black);
+      margin-bottom: 7px;
     }
 
     &-date {
@@ -111,6 +113,11 @@
       margin-bottom: -1px;
       // margin-top: -1px;
       transition: border-color .5s ease-in-out;
+      padding: 0;
+
+      &-one {
+        border-top: 1px solid var(--very-light-grey);
+      }
 
       &:first-of-type {
         // border-top: 1px solid var(--very-light-grey);
@@ -165,6 +172,8 @@
         line-height: 32px;
         color: var(--black);
         transition: color .5s ease-in-out;
+        // display: block;
+        // margin-top: 43px;
       }
 
       &-open {
@@ -192,7 +201,7 @@
 
     &-inner {
       padding-top: 25px;
-      padding-bottom: 25px;
+      padding-bottom: 49px;
     }
 
     &-content {

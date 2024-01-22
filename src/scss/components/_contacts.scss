@@ -7,10 +7,11 @@
 
 
   &__container {
+    margin-top: -7px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 65px;
+    padding-bottom: 40px;
 
 
     @include big-desktop {
@@ -21,6 +22,10 @@
 
 
   &__left {
+
+      max-width: 256px;
+      padding-bottom: 9px;
+
 
     @include big-desktop {
       margin-bottom: 30px;
@@ -58,7 +63,7 @@
   &__form {
 
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     gap: 20px;
 
     &-label {

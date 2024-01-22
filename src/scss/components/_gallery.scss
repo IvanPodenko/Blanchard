@@ -6,7 +6,7 @@
   background-image: url("../img/gallery-fon1.jpg");
 
   &__container {
-    padding-top: 80px;
+    padding-top: 71px;
   }
 
 
@@ -35,7 +35,7 @@
       line-height: 65px;
       color: var(--white);
       margin-top: 0;
-      margin-bottom: 10px;
+      margin-bottom:-2px;
     }
 
     &-subtitle {
@@ -206,6 +206,7 @@
         font-size: 16px;
         line-height: 32px;
         color: var(--white);
+        margin-left: -4px;
       }
 
 
@@ -224,7 +225,7 @@
   &__right {
     width: calc(1150 / 1600 * 100%);
     margin-right: 0;
-    margin-top: 35px;
+    margin-top: 25px;
 
     @include small-tablet {
       width: 100%;
@@ -242,8 +243,8 @@
     }
 
     &-pagination {
-      margin-right: 12px;
-      margin-left: 12px;
+      margin-right: 20px;
+      margin-left: 20px;
       text-align: center;
       color: var(--white);
     }
@@ -257,6 +258,7 @@
       border: none;
       border-radius: 50%;
       cursor: pointer;
+      // margin-left: 8px;
 
       &::before {
         content: "";

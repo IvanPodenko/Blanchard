@@ -6,9 +6,11 @@ ymaps
     const map = new maps.Map('map', {
       center: [55.758468, 37.601088],
       zoom: 14,
-      controls: ["geolocationControl", "zoomControl"]
+      controls: ["geolocationControl", "zoomControl"],
+      scrollZoom: false // Опция, отключающая скролл на карте
     });
 
+    map.behaviors.disable('scrollZoom');
 
     // Создаем метку с помощью дополнительных параметров
     const placemark = new maps.Placemark([55.758468, 37.601088], {
@@ -28,9 +30,8 @@ ymaps
         // iconImageOffset: [-15, -42]
     });
 
-    map.geoObjects.add(placemark);  // добавление метки и балуна на карту
+    map.geoObjects.add(placemark);  // добавляем метку и балун на карту
 
   })
   .catch(error => console.log('Failed to load Yandex Maps', error));
-
 

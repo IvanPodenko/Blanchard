@@ -1,4 +1,5 @@
 .events {
+  padding-top: 89px;
 
   &__container {
     position: relative;
@@ -74,7 +75,7 @@
 
     &-museums {
       display: block;
-      width: 206px;
+      max-width: 145px;
       color: var(--nobel);
       font-family: 'Open Sans';
       font-size: 12px;
@@ -84,7 +85,7 @@
       margin-bottom: 13px;
 
       &-one {
-        width: 138px;
+        max-width: 100px;
       }
     }
 
@@ -126,6 +127,7 @@
       font-weight: 600;
       line-height: normal;
       margin-bottom: 10px;
+      max-width: 400px;
     }
 
     &-descr {
@@ -154,6 +156,7 @@
       line-height: 32px;
       margin-top: auto;
       outline: none;
+      padding-top: 65px;
 
 
 
