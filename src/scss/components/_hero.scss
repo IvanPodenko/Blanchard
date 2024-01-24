@@ -1,5 +1,7 @@
 .hero {
 
+ 
+
   &__swiper {
     position: absolute;
     top: 0px;
@@ -36,6 +38,11 @@
     // z-index: 1;
     // padding-bottom: 133px;
 
+    @include tablet-one {
+      padding-top: 106px;
+      max-width: 700px;
+    }
+
     &-title {
       margin: 0;
       font-family: "Open Sans";
@@ -49,6 +56,7 @@
       &-hidden {
         display: none;
       }
+
 
       @include mobile {
         font-size: 32px;
@@ -71,13 +79,20 @@
       margin-bottom: 92px;
       max-width: 545px;
 
+      @include tablet-one {
+        line-height: 28px;
+        margin-top: -10px;
+        margin-top: -10px;
+        max-width: 661px;
+      }
+
       @include small-tablet {
-      max-width: 661px;
+        line-height: 28px;
       }
 
       @include mobile {
         font-size: 12px;
-        max-width: 547px;
+        // max-width: 547px;
         margin-bottom: 20px;
       }
     }
@@ -109,6 +124,10 @@
       &:active {
         border: 3px solid var(--mauve);
         background-color: var(--studio);
+      }
+
+      @include tablet-one {
+        margin-top: 44px;
       }
 
       @include mobile {

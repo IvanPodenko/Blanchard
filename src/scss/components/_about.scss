@@ -3,6 +3,10 @@
   &__container {
     padding-top: 70px;
     padding-bottom: 80px;
+
+    @include tablet-one {
+      padding-top: 64px;
+    }
   }
 
   &__title {

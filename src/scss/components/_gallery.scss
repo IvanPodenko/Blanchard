@@ -5,6 +5,10 @@
   min-height: 595px;
   background-image: url("../img/gallery-fon1.jpg");
 
+  @include tablet-one {
+    min-height: 550px;
+  }
+
   &__container {
     padding-top: 71px;
   }
@@ -46,6 +50,10 @@
       font-size: 16px;
       line-height: 32px;
       color: var(--white);
+    }
+
+    & .header_choices {
+      width: 281px;
     }
 
     & .choices .choices__list .choices__item.is-selected {
@@ -140,6 +148,10 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @include tablet-one {
+      margin-top: 79px;
+    }
    }
 
   &__custom {
@@ -226,6 +238,10 @@
     width: calc(1150 / 1600 * 100%);
     margin-right: 0;
     margin-top: 25px;
+
+    @include tablet-one {
+      padding-left: 70px;
+    }
 
     @include small-tablet {
       width: 100%;
@@ -325,6 +341,10 @@
       position: relative;
       overflow: hidden;
       background-color: var(--wisteria);
+
+      @include tablet-one {
+        height: 315px;
+      }
 
 
       &::before {

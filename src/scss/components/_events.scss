@@ -1,6 +1,11 @@
 .events {
   padding-top: 89px;
 
+
+  @include tablet-one {
+    padding-top: 50px;
+  }
+
   &__container {
     position: relative;
   }
@@ -178,6 +183,12 @@
 
     &-image {
 
+
+      @include tablet-one {
+        height: 200px;
+      }
+
+      
       @include small-tablet{
         width: 100%;
       }

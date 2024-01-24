@@ -46,14 +46,10 @@
       outline: none;
 
 
-      // @include tablet {
-      //   & {
-      //     margin-right: 10%;
-      //     position: absolute;
-      //     left: 40%;
-      //     top: 7%;
-      //   }
-      // }
+      @include tablet-one {
+        padding-right: 17px;
+      }
+
 
       @include mobile {
         & {
@@ -74,6 +70,10 @@
     }
 
     &-image {
+
+      @include tablet-one {
+        width: 183px;
+      }
 
         @include small-mobile {
         width: 108px;
