@@ -4,6 +4,10 @@
   border-top: 1px solid var(--very-light-grey);
   padding-top: 45px;
 
+  @include tablet-one {
+    padding-top: 49px;
+  }
+
 
 
   &__container {
@@ -31,6 +35,10 @@
       margin-bottom: 30px;
     }
 
+    @include tablet-one {
+      margin-bottom: 19px;
+    }
+
 
     &-title {
       margin: 0;
@@ -48,8 +56,12 @@
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
-        line-height: 32px
-    }
+        line-height: 32px;
+
+        @include tablet-one {
+          font-size: 14px;
+        }
+      }
 
   }
 
@@ -58,6 +70,12 @@
     @include big-desktop {
       margin-bottom: 30px;
     }
+
+    @include tablet-one {
+      margin-bottom: 28px;
+    }
+
+
   }
 
   &__form {
@@ -102,6 +120,10 @@
         background-color: var(--nobel);
       }
 
+      @include tablet-one {
+        height: 49px;
+      }
+
       @include small-tablet {
         margin-bottom: 10px;
       }
@@ -127,7 +149,9 @@
       background: var(--white);
 
       @include tablet-one {
-        margin-bottom: 10px;
+        width: 343px;
+        height: 48px;
+        margin-bottom: 3px;
       }
     }
   }

@@ -2,9 +2,18 @@
 
   &__container {
     padding-top: 1px;
+
+    @include tablet-one {
+      padding-top: 45px;
+    }
   }
 
+
   margin-bottom: 77px;
+
+  @include tablet-one {
+    margin-bottom: 55px;
+  }
 
 
 
@@ -117,6 +126,10 @@
         &:active {
           border-color: var( --amethyst);
         }
+
+        @include tablet-one {
+          height: 128px;
+        }
       }
 
       &-image {
@@ -126,6 +139,10 @@
         height: 42%;
         width: 74%;
         object-fit: contain;
+
+        @include tablet-one {
+          width: 84%;
+        }
       }
 
       // @include for-desktop {

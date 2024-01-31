@@ -18,6 +18,22 @@
   &__link {
     outline: none;
 
+    &-vk {
+
+      @include tablet-one {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    &-ok {
+
+      @include tablet-one {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
     & svg path {
       transition: fill .3s ease-in-out;
     }

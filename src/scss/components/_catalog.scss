@@ -7,6 +7,10 @@
     @include tablet-one {
       padding-top: 39px;
     }
+
+    @include small-tablet {
+      padding-top: 52px;
+    }
   }
 
   &__title {
@@ -28,6 +32,10 @@
     color: var(--black);
     max-width: 1080px;
     margin-bottom: 39px;
+
+    @include small-tablet {
+      margin-bottom: 21px;
+    }
   }
 
   &__wrap {
@@ -86,6 +94,10 @@
 
       @include tablet-one {
         width: 81%;
+      }
+
+      @include small-tablet {
+        width: 100%;
       }
     }
 
@@ -235,6 +247,10 @@
 
         @include tablet-one {
           column-count: 2;
+        }
+
+        @include small-tablet {
+          column-count: 3;
         }
       }
 

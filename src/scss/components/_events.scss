@@ -107,8 +107,9 @@
       // }
 
       @include tablet-one {
-        padding: 13px 34px 50px 34px;
-        min-height: 571px;
+        padding: 0;
+        // padding: 13px 34px 50px 34px;
+        min-height: 437px;
       }
 
       @include small-tablet {
@@ -133,6 +134,13 @@
       line-height: normal;
       margin-bottom: 10px;
       max-width: 400px;
+
+      @include tablet-one {
+        line-height: 32px;
+        padding-top: 8px;
+        width: 269px;
+        padding-left: 31px;
+      }
     }
 
     &-descr {
@@ -149,6 +157,11 @@
       //   width: 452px;
       //   margin-bottom: 103px;
       // }
+
+      @include tablet-one {
+        padding-left: 34px;
+        padding-right: 33px;
+      }
     }
 
     &-details {
@@ -173,11 +186,22 @@
         background-color: var(--amethyst);
         position: absolute;
         left: 0;
+
+        @include tablet-one {
+          left: 27%;
+          bottom: 12%;
+        }
       }
 
       &:focus-visible {
         padding: 3px;
         border: 2px solid var(--amethyst);
+      }
+
+
+      @include tablet-one {
+        padding-top: 0;
+        padding-left: 33px;
       }
     }
 
@@ -188,7 +212,7 @@
         height: 200px;
       }
 
-      
+
       @include small-tablet{
         width: 100%;
       }

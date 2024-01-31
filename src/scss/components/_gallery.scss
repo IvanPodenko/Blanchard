@@ -152,6 +152,10 @@
     @include tablet-one {
       margin-top: 79px;
     }
+
+    @include small-tablet {
+      margin-top: 13px;
+    }
    }
 
   &__custom {
@@ -245,6 +249,8 @@
 
     @include small-tablet {
       width: 100%;
+      padding-left: 0;
+      margin-top: 20px;
     }
 
     &-navigation {
