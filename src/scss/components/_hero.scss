@@ -1,6 +1,10 @@
 .hero {
 
- 
+
+  @include small-tablet {
+    height: 309px;
+  }
+
 
   &__swiper {
     position: absolute;
@@ -38,10 +42,25 @@
     // z-index: 1;
     // padding-bottom: 133px;
 
+
     @include tablet-one {
       padding-top: 106px;
       max-width: 700px;
     }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 40px;
+    }
+
+    @include small-mobile {
+      padding-top: 25px;
+      text-align: center;
+    }
+
+
 
     &-title {
       margin: 0;
@@ -57,15 +76,16 @@
         display: none;
       }
 
-
       @include mobile {
         font-size: 32px;
         line-height: 50px;
       }
 
       @include small-mobile {
-        text-align: center;
+        margin-bottom: 5px;
       }
+
+
     }
 
     &-text {
@@ -86,14 +106,17 @@
         max-width: 661px;
       }
 
-      @include small-tablet {
-        line-height: 28px;
-      }
-
       @include mobile {
         font-size: 12px;
         // max-width: 547px;
         margin-bottom: 20px;
+      }
+
+      @include small-mobile {
+        font-weight: 400;
+        line-height: normal;
+        // line-height: 28px;
+        width: 265px;
       }
     }
 
@@ -134,13 +157,11 @@
         font-size: 12px;
         padding: 11px 16px 14px 19px;
       }
+
+      @include small-mobile {
+        margin-top: 17px;
+      }
     }
 
-    @include mobile {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 40px;
-    }
   }
 }

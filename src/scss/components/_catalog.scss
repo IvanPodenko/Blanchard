@@ -69,6 +69,11 @@
       line-height: normal;
       color: var(--black);
       margin-bottom: 7px;
+
+      @include small-tablet {
+        margin: 0;
+        padding-top: 28px;
+      }
     }
 
     &-date {
@@ -435,6 +440,8 @@
     transition: .3s ease-in-out;
     opacity: 1s ease-in-out;
     transform: .8s ease-in-out;
+
+
   }
 
   & .tab-content-active {

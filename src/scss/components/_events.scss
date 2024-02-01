@@ -6,6 +6,10 @@
     padding-top: 50px;
   }
 
+  @include small-tablet {
+    padding-top: 59px;
+  }
+
   &__container {
     position: relative;
   }
@@ -113,7 +117,7 @@
       }
 
       @include small-tablet {
-        min-height: 350px;
+        min-height: 481px;
       }
 
 
@@ -191,6 +195,10 @@
           left: 27%;
           bottom: 12%;
         }
+
+        @include small-tablet {
+          bottom: 62%;
+        }
       }
 
       &:focus-visible {
@@ -202,6 +210,10 @@
       @include tablet-one {
         padding-top: 0;
         padding-left: 33px;
+      }
+
+      @include small-tablet {
+        padding-bottom: 44px;
       }
     }
 

@@ -10,6 +10,10 @@
   &__top {
     background-color: var(--black);
 
+    @include small-mobile {
+      height: 45px;
+    }
+
     &-container {
       display: flex;
       align-items: center;
@@ -26,8 +30,9 @@
           // top: 7%;
         }
 
-        @include mobile {
-          // margin-left: 24px;
+        @include small-mobile {
+          width: 25px;
+          height: 18px;
         }
       }
 
@@ -75,9 +80,14 @@
         width: 183px;
       }
 
-        @include small-mobile {
+      @include small-tablet {
         width: 108px;
         height: 25px;
+      }
+
+      @include small-mobile{
+        width: 96px;
+        height: 21px;
       }
     }
 

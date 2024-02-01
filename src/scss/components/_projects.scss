@@ -49,6 +49,10 @@
     font-style: normal;
     font-weight: 600;
     line-height: 32px;
+
+    @include small-tablet {
+      margin-top: 27px;
+    }
     }
 
     &__partners {
@@ -129,6 +133,10 @@
 
         @include tablet-one {
           height: 128px;
+        }
+
+        @include small-tablet {
+          height: 114px;
         }
       }
 
