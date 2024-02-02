@@ -82,6 +82,12 @@
     border: 1px solid var(--very-light-grey);
     box-sizing: border-box;
 
+    @include tablet-one {
+      height: 683px;
+      // width: 289.667px;
+      // margin-right: 28px;
+    }
+
     &-museums {
       display: block;
       max-width: 145px;
@@ -99,7 +105,7 @@
     }
 
     &-inner {
-      padding: 13px 50px 50px 50px;
+      padding: 13px 50px 40px 50px;
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
@@ -178,7 +184,7 @@
       line-height: 32px;
       margin-top: auto;
       outline: none;
-      padding-top: 65px;
+      // padding-top: 65px;
 
 
 
@@ -221,6 +227,7 @@
 
 
       @include tablet-one {
+        width: 100%;
         height: 200px;
       }
 
@@ -249,7 +256,10 @@
       display: flex;
     }
   }
+
+
 }
+
 
 
 

@@ -1,6 +1,10 @@
 .hero {
 
 
+  @include tablet-one {
+    height: 768px;
+  }
+
   @include small-tablet {
     height: 309px;
   }
@@ -35,7 +39,7 @@
   &__content {
     // position: relative;
     max-width: 597px;
-    padding: 132px 0px;
+    padding: 132px 0px 123px 0;
     // max-width: 597px;
     // padding-right: 20px;
     // margin-left: 50px;

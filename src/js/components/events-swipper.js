@@ -21,12 +21,12 @@ const swiperEvents = new Swiper('.events__wrapper', {
 
       768: {
       slidesPerView: 2,
-      spaceBetween: 38
+      spaceBetween: 28
     },
 
       1024: {
         slidesPerView: 3,
-        spaceBetween: 34
+        spaceBetween: 27
       },
 
   }
