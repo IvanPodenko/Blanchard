@@ -9,7 +9,7 @@
     }
 
     @include small-tablet {
-      padding-top: 52px;
+      padding-top: 40px;
     }
   }
 
@@ -72,7 +72,8 @@
 
       @include small-tablet {
         margin: 0;
-        padding-top: 28px;
+        padding-top: 17px;
+        margin-bottom: 6px;
       }
     }
 
@@ -93,6 +94,11 @@
       line-height: 32px;
       color: var(--black);
       max-width: 750px;
+
+      @include small-tablet {
+        padding-top: 6px;
+        margin: 0;
+      }
     }
 
     &-right {
@@ -143,6 +149,10 @@
       // margin-top: -1px;
       transition: border-color .5s ease-in-out;
       padding: 0;
+
+      @include small-tablet {
+        margin-bottom: 0.5px;
+      }
 
       &-one {
         border-top: 1px solid var(--very-light-grey);

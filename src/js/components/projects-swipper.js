@@ -13,16 +13,21 @@ const swiperEvents = new Swiper('.projects__partners', {
 
     breakpoints: {
 
-      1024: {
-        slidesPerView: 2,
-        spaceBetween: 50
-      },
-
       768: {
         slidesPerView: 2,
         spaceBetween: 50
       },
 
+      1370: {
+        slidesPerView: 2,
+        spaceBetween: 50
+      },
+
+
+      1439: {
+        slidesPerView: 3,
+        spaceBetween: 50
+      },
 
     }
 

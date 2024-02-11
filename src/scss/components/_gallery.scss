@@ -16,19 +16,27 @@
 
   &__wrap {
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     justify-content: space-between;
+    gap: 50px;
+
+    @include small-tablet {
+      flex-direction: column;
+      gap: 34px;
+    }
   }
 
   &__left {
     display: flex;
     flex-direction: column;
-    width: calc(400 / 1600 * 100%);
+    // width: calc(400 / 1600 * 100%);
+    max-width: 400px;
+    width: 100%;
 
     @include small-tablet {
-      width: 100%;
+      max-width: 281px;
       marign-left: 0;
-      margin-bottom: 20px;
+      margin-bottom: -20px;
     }
 
     &-title {
@@ -52,9 +60,9 @@
       color: var(--white);
     }
 
-    & .header_choices {
-      width: 281px;
-    }
+    // & .header_choices {
+    //   width: 400px;
+    // }
 
     & .choices .choices__list .choices__item.is-selected {
       display: none;
@@ -239,19 +247,32 @@
 
 
   &__right {
-    width: calc(1150 / 1600 * 100%);
+    width: 100%;
+    max-width: 1150px;
     margin-right: 0;
     margin-top: 25px;
 
-    @include tablet-one {
-      padding-left: 70px;
+    @include media(1470px) {
+      max-width: 794px;
+    }
+
+    @include media(1225px) {
+      max-width: 594px;
     }
 
     @include small-tablet {
-      width: 100%;
-      padding-left: 0;
-      margin-top: 20px;
+      max-width: 100%;
     }
+
+    // @include tablet-one {
+    //   padding-left: 70px;
+    // }
+
+    // @include small-tablet {
+    //   width: 100%;
+    //   padding-left: 0;
+    //   margin-top: 20px;
+    // }
 
     &-navigation {
       display: inline-flex;
@@ -352,6 +373,11 @@
         height: 315px;
       }
 
+      @include small-tablet {
+
+        height: 330px;
+      }
+
 
       &::before {
         content: "";
@@ -380,7 +406,7 @@
         box-sizing: border-box;
         opacity: 0;
         background-color: rgba(0, 0, 0, 0.5);
-        background-image: url("https://curator.cf/blanchard-images/loup.svg");
+        background-image: url("../img/galleryplus.svg");
         background-repeat: no-repeat;
         background-size: 100px;
         background-position: center;

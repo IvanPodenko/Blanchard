@@ -2,12 +2,12 @@
 
 
   @include tablet-one {
-    height: 768px;
+    height: 668px;
   }
 
-  @include small-tablet {
-    height: 309px;
-  }
+  // @include small-tablet {
+  //   height: 309px;
+  // }
 
 
   &__swiper {

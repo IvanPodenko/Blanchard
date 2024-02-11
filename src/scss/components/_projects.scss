@@ -78,6 +78,10 @@
 
         &-prev {
           left: 48px;
+
+          @include small-tablet {
+            top: 29%;
+          }
         }
 
         &-next {
@@ -85,6 +89,10 @@
 
           & svg {
             transform: rotate(180deg);
+          }
+          
+          @include small-tablet {
+            top: 29%;
           }
         }
 
@@ -154,13 +162,17 @@
         }
       }
 
-      // @include for-desktop {
-      //   max-width: 818px;
-      // }
+      @include media(1600px) {
+        max-width: 1200px;
+      }
 
-      // @include small-tablet {
-      //   max-width: 195px;
-      // }
+      @include tablet-one {
+        max-width: 818px;
+      }
+
+      @include small-tablet {
+        max-width: 562px;
+      }
 
     }
 
