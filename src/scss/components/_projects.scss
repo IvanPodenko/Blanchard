@@ -1,22 +1,27 @@
 .projects {
 
   padding-top: 13px;
-
-  &__container {
-
-    @include tablet-one {
-      padding-top: 30px;
-    }
-  }
-
-
   margin-bottom: 77px;
 
   @include tablet-one {
     margin-bottom: 55px;
   }
 
+  @include small-mobile {
+    padding-top: 0;
+  }
 
+
+  &__container {
+
+    @include tablet-one {
+      padding-top: 30px;
+    }
+
+    @include small-mobile {
+      padding: 0 16px 39px 14px;
+    }
+  }
 
 
   &__title {
@@ -26,6 +31,12 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+
+    @include small-mobile {
+      font-size: 28px;
+      line-height: 38px;
+      margin-bottom: 38px;
+    }
   }
 
   &__descr {
@@ -51,9 +62,16 @@
     font-weight: 600;
     line-height: 32px;
 
-    @include small-tablet {
-      margin-top: 27px;
-    }
+      @include small-tablet {
+        margin-top: 27px;
+      }
+
+      @include small-mobile {
+        font-size: 18px;
+        line-height: 32px;
+        margin-bottom: -29px;
+        margin-top: 52px;
+      }
     }
 
     &__partners {
@@ -82,6 +100,11 @@
           @include small-tablet {
             top: 29%;
           }
+
+          @include small-mobile {
+            top: 12%;
+            left: 4%;
+          }
         }
 
         &-next {
@@ -90,9 +113,14 @@
           & svg {
             transform: rotate(180deg);
           }
-          
+
           @include small-tablet {
             top: 29%;
+          }
+
+          @include small-mobile {
+            right: 4%;
+            top: 12%;
           }
         }
 
@@ -147,6 +175,10 @@
         @include small-tablet {
           height: 114px;
         }
+
+        @include small-mobile {
+          height: 65px;
+        }
       }
 
       &-image {
@@ -159,6 +191,10 @@
 
         @include tablet-one {
           width: 84%;
+        }
+
+        @include small-mobile {
+          width: 56%;
         }
       }
 
@@ -173,6 +209,12 @@
       @include small-tablet {
         max-width: 562px;
       }
+
+      @include small-mobile {
+        max-width: 190px;
+      }
+
+
 
     }
 

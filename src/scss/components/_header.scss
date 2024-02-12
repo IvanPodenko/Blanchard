@@ -44,6 +44,10 @@
       @include mobile {
         padding: 0 15px;
       }
+
+      @include small-mobile {
+        min-height: 49px;
+      }
     }
 
     &-link {

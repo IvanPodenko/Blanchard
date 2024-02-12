@@ -5,9 +5,9 @@
     height: 668px;
   }
 
-  // @include small-tablet {
-  //   height: 309px;
-  // }
+  @include small-mobile {
+    height: 309px;
+  }
 
 
   &__swiper {
@@ -120,7 +120,7 @@
         font-weight: 400;
         line-height: normal;
         // line-height: 28px;
-        width: 265px;
+        width: 248px;
       }
     }
 
@@ -163,7 +163,9 @@
       }
 
       @include small-mobile {
-        margin-top: 17px;
+        margin-top: 20px;
+        padding-top: 7px;
+        padding-bottom: 9px;
       }
     }
 

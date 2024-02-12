@@ -11,6 +11,10 @@
 
   &__container {
     padding-top: 81px;
+
+    @include small-mobile {
+      padding: 48px 16px 39px 15px;
+    }
   }
 
 
@@ -39,6 +43,10 @@
       margin-bottom: -20px;
     }
 
+    @include small-mobile {
+      max-width: 290px;
+    }
+
     &-title {
       font-family: "Open Sans";
       font-style: normal;
@@ -48,6 +56,11 @@
       color: var(--white);
       margin-top: 0;
       margin-bottom:-2px;
+
+      @include small-mobile {
+        font-size: 28px;
+        line-height: 38px;
+      }
     }
 
     &-subtitle {
@@ -58,6 +71,10 @@
       font-size: 16px;
       line-height: 32px;
       color: var(--white);
+
+      @include small-mobile {
+        margin-bottom: 6px;
+      }
     }
 
     // & .header_choices {
@@ -164,6 +181,10 @@
     @include small-tablet {
       margin-top: 13px;
     }
+
+    @include small-mobile {
+      margin-top: 2px;
+    }
    }
 
   &__custom {
@@ -264,6 +285,12 @@
       max-width: 100%;
     }
 
+    @include small-mobile {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-top: 16px;
+    }
+
     // @include tablet-one {
     //   padding-left: 70px;
     // }
@@ -282,6 +309,10 @@
       @include mobile {
         align-self: center;
         margin-top: 20px;
+      }
+
+      @include small-mobile {
+        margin: 0;
       }
     }
 
@@ -362,6 +393,10 @@
     @include mobile {
       display: flex;
       flex-direction: column-reverse;
+    }
+
+    @include small-mobile {
+      margin-bottom: 69px;
     }
 
     &-link {

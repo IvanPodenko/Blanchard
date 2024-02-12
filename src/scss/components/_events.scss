@@ -10,8 +10,16 @@
     padding-top: 80px;
   }
 
+  @include small-mobile {
+    padding-top: 0;
+  }
+
   &__container {
     position: relative;
+
+    @include small-mobile {
+      padding: 9px 16px 26px 16px;
+    }
   }
 
   &__title {
@@ -22,12 +30,21 @@
     font-size: 48px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal
+    line-height: normal;
+
+    @include small-mobile {
+      font-size: 28px;
+      line-height: 38px;
+    }
   }
 
   &__wrapper {
     position: relative;
     margin-bottom: 30px;
+
+    @include small-mobile {
+      margin-bottom: 18px;
+    }
 
     &-btn {
       display: flex;
@@ -150,6 +167,10 @@
         width: 269px;
         padding-left: 31px;
       }
+
+      @include small-mobile {
+        padding-left: 21px;
+      }
     }
 
     &-descr {
@@ -170,6 +191,10 @@
       @include tablet-one {
         padding-left: 34px;
         padding-right: 33px;
+      }
+
+      @include small-mobile {
+        padding-left: 20px;
       }
     }
 
@@ -219,6 +244,11 @@
 
       @include small-tablet {
         padding-bottom: 44px;
+      }
+
+      @include small-mobile {
+        padding-bottom: 51px;
+        padding-left: 27px;
       }
     }
 
