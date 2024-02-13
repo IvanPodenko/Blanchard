@@ -2,7 +2,7 @@
 
   border-bottom: 1px solid var(--very-light-grey);
   border-top: 1px solid var(--very-light-grey);
-  padding-top: 43px;
+  padding-top: 39px;
 
   @include tablet-one {
     padding-top: 42px;
@@ -10,6 +10,11 @@
 
   @include small-tablet {
     padding-top: 31px;
+  }
+
+  @include small-mobile {
+    border-top: none;
+    border-bottom: none;
   }
 
 
@@ -24,6 +29,12 @@
 
     @include big-desktop {
       display: inline-block;
+    }
+
+    @include small-mobile {
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 0;
     }
 
   }
@@ -43,9 +54,9 @@
       margin-bottom: 19px;
     }
 
-    // @include small-tablet {
-    //   margin-bottom: 7px;
-    // }
+    @include small-mobile {
+      margin-bottom: 3px;
+    }
 
 
     &-title {
@@ -56,6 +67,11 @@
       font-style: normal;
       font-weight: 600;
       line-height: 32px;
+
+      @include small-mobile {
+        font-size: 18px;
+        line-height: 25px;
+      }
     }
 
       &-text {
@@ -85,19 +101,28 @@
       margin-bottom: 28px;
     }
 
+    @include small-mobile {
+     margin-bottom: 18px;
+    }
 
   }
 
   &__form {
 
 
-    @include small-tablet {
-     flex-wrap: wrap;
-    }
+
 
     display: flex;
     // flex-wrap: wrap;
     gap: 20px;
+
+    @include small-tablet {
+      flex-wrap: wrap;
+     }
+
+     @include small-mobile {
+      gap: 28px;
+     }
 
     &-label {
       position: relative;
@@ -145,7 +170,15 @@
 
       @include small-tablet {
         margin-bottom: -7px;
-        width: 323px;
+        max-width: 360px;
+      }
+
+      @include small-mobile {
+        max-width: 290px;
+        height: 40px;
+        padding-bottom: 12px;
+        // padding-top: 9px;
+        // margin-bottom: 7px;
       }
     }
 
@@ -177,6 +210,12 @@
       @include small-tablet {
          width: 316px;
       }
+
+      @include small-mobile {
+        width: 128px;
+        height: 40px;
+        font-size: 10px;
+      }
     }
   }
 
@@ -197,6 +236,12 @@
 
       @include big-desktop {
         margin-bottom: 6px;
+      }
+
+
+      @include small-mobile {
+        font-size: 18px;
+        line-height: 32px;
       }
 
     }
@@ -226,6 +271,22 @@
       &:focus-visible {
         opacity: 0.5;
       }
+
+      &-one {
+
+        @include small-mobile {
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+      &-two {
+
+        @include small-mobile {
+          width: 50px;
+          height: 50px;
+        }
+      }
     }
   }
 
@@ -236,6 +297,11 @@
   &__map {
     border-top: 1px solid lightgray;
     height: 700px;
+
+    @include small-mobile {
+      height: 331px;
+      border-top: none;
+    }
   }
 
   [class*="ground-pane"] {

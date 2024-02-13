@@ -13,7 +13,7 @@
     padding-top: 81px;
 
     @include small-mobile {
-      padding: 48px 16px 39px 15px;
+      padding: 47px 16px 39px 15px;
     }
   }
 
@@ -396,7 +396,7 @@
     }
 
     @include small-mobile {
-      margin-bottom: 69px;
+      margin-bottom: 20px;
     }
 
     &-link {
@@ -409,8 +409,11 @@
       }
 
       @include small-tablet {
-
         height: 330px;
+      }
+
+      @include small-mobile {
+        height: 366px;
       }
 
 
