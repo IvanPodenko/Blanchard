@@ -1,8 +1,10 @@
 .about {
 
+  padding-top: 81px;
+  padding-bottom: 69px;
+
   &__container {
-    padding-top: 81px;
-    padding-bottom: 69px;
+
 
     @include tablet-one {
       padding-top: 81px;

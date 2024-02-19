@@ -1,8 +1,9 @@
 .catalog {
-  // margin-bottom: 40px;
+  padding-top: 80px;
+  padding-bottom: 40px;
 
   &__container {
-    padding-top: 39px;
+    // padding-top: 39px;
 
     @include tablet-one {
       padding-top: 39px;

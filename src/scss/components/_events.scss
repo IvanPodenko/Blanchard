@@ -1,5 +1,5 @@
 .events {
-  padding-top: 89px;
+  padding-top: 40px;
 
 
   @include tablet-one {
@@ -118,6 +118,10 @@
       &-one {
         max-width: 100px;
       }
+
+      @include tablet-one {
+        align-self: flex-end;
+      }
     }
 
     &-inner {
@@ -133,8 +137,8 @@
       // }
 
       @include tablet-one {
-        padding: 0;
-        // padding: 13px 34px 50px 34px;
+        // padding: 0;
+        padding: 13px 34px 50px 34px;
         min-height: 437px;
       }
 
@@ -162,10 +166,10 @@
       max-width: 400px;
 
       @include tablet-one {
-        line-height: 32px;
-        padding-top: 8px;
-        width: 269px;
-        padding-left: 31px;
+        // line-height: 32px;
+        // padding-top: 8px;
+        // width: 269px;
+        // padding-left: 31px;
       }
 
       @include small-mobile {
@@ -181,7 +185,7 @@
       font-style: normal;
       font-weight: 400;
       line-height: 32px;
-      // margin-bottom: 66px;
+      margin-bottom: 40px;
 
       // &-one {
       //   width: 452px;
@@ -189,8 +193,8 @@
       // }
 
       @include tablet-one {
-        padding-left: 34px;
-        padding-right: 33px;
+        margin-bottom: 22px;
+        // padding-right: 33px;
       }
 
       @include small-mobile {
@@ -222,7 +226,7 @@
         left: 0;
 
         @include tablet-one {
-          left: 27%;
+          left: 0;
           bottom: 12%;
         }
 
@@ -238,8 +242,9 @@
 
 
       @include tablet-one {
-        padding-top: 0;
-        padding-left: 33px;
+        margin-top: auto;
+        // padding-top: 22px;
+        // padding-left: 33px;
       }
 
       @include small-tablet {
@@ -254,6 +259,7 @@
 
     &-image {
 
+      width: 100%;
 
       @include tablet-one {
         width: 100%;

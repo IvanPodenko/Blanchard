@@ -1,16 +1,18 @@
 
 
 .gallery {
-  margin-bottom: 40px;
-  min-height: 595px;
+  // margin-bottom: 40px;
+  // min-height: 595px;
   background-image: url("../img/gallery-fon1.jpg");
+  padding-top: 81px;
+  padding-bottom: 80px;
 
   @include tablet-one {
     min-height: 560px;
   }
 
   &__container {
-    padding-top: 81px;
+
 
     @include small-mobile {
       padding: 47px 16px 39px 15px;
@@ -55,7 +57,7 @@
       line-height: 65px;
       color: var(--white);
       margin-top: 0;
-      margin-bottom:-2px;
+      margin-bottom: 10px;
 
       @include small-mobile {
         font-size: 28px;
@@ -64,6 +66,7 @@
     }
 
     &-subtitle {
+      margin: 0;
       margin-bottom: 10px;
       font-family: "Open Sans";
       font-style: normal;
