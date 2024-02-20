@@ -3,6 +3,10 @@
   padding-top: 81px;
   padding-bottom: 69px;
 
+  @include tablet-one {
+    padding-top: 0;
+  }
+
   &__container {
 
 

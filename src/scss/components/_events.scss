@@ -3,7 +3,7 @@
 
 
   @include tablet-one {
-    padding-top: 50px;
+    padding-top: 11px;
   }
 
   @include small-tablet {
@@ -121,6 +121,7 @@
 
       @include tablet-one {
         align-self: flex-end;
+        margin-bottom: 5px;
       }
     }
 
@@ -166,6 +167,7 @@
       max-width: 400px;
 
       @include tablet-one {
+        margin-bottom: 7px;
         // line-height: 32px;
         // padding-top: 8px;
         // width: 269px;

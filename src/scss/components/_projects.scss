@@ -33,6 +33,12 @@
     font-weight: 400;
     line-height: normal;
 
+    @include tablet-one {
+      margin: 0;
+      margin-bottom: 18px;
+      padding-top: 37px;
+    }
+
     @include small-mobile {
       font-size: 28px;
       line-height: 38px;
@@ -50,6 +56,10 @@
     line-height: 32px;
     margin-top: 0;
     margin-bottom: 30px;
+
+    @include tablet-one {
+      margin-bottom: 19px;
+    }
 
     &-link {
       color: var(--amethyst);

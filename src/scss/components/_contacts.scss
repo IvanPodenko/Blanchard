@@ -157,11 +157,12 @@
       border-radius: 100px;
       border: 1px solid #333;
       padding: 9px 43px 9px 24px;
-      transition: border-color .3 ease-in-out;
+      background-color: transparent;
+      transition: background-color .3s ease-in-out;
 
 
       &:hover {
-        background-color: var(--nobel);
+        background-color: var(--whisper);
       }
 
       @include tablet-one {
@@ -200,6 +201,13 @@
       border-radius: 100px;
       border: 2px solid var(--amethyst);
       background: var(--white);
+      background-color: transparent;
+      transition: background-color .3s ease-in-out, color .3s ease-in-out;
+
+      &:hover {
+        background-color: var(--amethyst);
+        color: var(--white);
+      }
 
       @include tablet-one {
         width: 343px;

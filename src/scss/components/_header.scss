@@ -43,6 +43,11 @@
         justify-content: space-between;
       }
 
+      @include tablet-one {
+        padding-top: 28px;
+        padding-bottom: 26px;
+      }
+
       @include mobile {
         padding: 0 15px;
       }
@@ -66,7 +71,7 @@
         & {
           position: absolute;
           left: 35%;
-          width: 107px;
+          // width: 107px;
           // top: 7%;
         }
       }
