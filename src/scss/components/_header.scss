@@ -112,6 +112,7 @@
 
       @include tablet {
         & {
+          padding: 48px 38px;
           display: none;
           position: absolute;
           top: 0;
@@ -151,7 +152,7 @@
         max-width: 991px;
         // padding-top: 37px;
         // padding-bottom: 37px;
-        padding-right: 239px;
+        // padding-right: 40px;
         width: 100%;
 
         @include tablet {
@@ -159,7 +160,7 @@
           // display: flex;
           // flex-direction: column;
           // padding-top: 10%;
-          padding-left: 50px;
+          // padding-left: 50px;
           width: 100%;
           overflow-y: auto;
           height: 100%;
@@ -171,7 +172,7 @@
 
         @include mobile {
           & {
-            padding-top: 15%;
+            // padding-top: 15%;
           }
         }
       }
@@ -291,11 +292,11 @@
 
       @include tablet {
         padding: 22px 88px;
-        margin-bottom: 50px;
+        // margin-bottom: 50px;
         border: 2px solid var(--amethyst);
         border-radius: 100px;
         background: transparent;
-        margin-left: 50px;
+        // margin-left: 50px;
       }
 
       &-wrap {

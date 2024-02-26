@@ -183,7 +183,7 @@
       padding: 0;
 
       @include small-tablet {
-        margin-bottom: 0.5px;
+        margin-bottom: -0.5px;
       }
 
       @include small-mobile {
@@ -342,6 +342,7 @@
       }
 
       &-btn {
+        text-align: left;
         padding: 0;
         background-color: transparent;
         border: none;

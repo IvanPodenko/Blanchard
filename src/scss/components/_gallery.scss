@@ -408,15 +408,15 @@
       background-color: var(--wisteria);
 
       @include tablet-one {
-        height: 315px;
+        // height: 315px;
       }
 
       @include small-tablet {
-        height: 330px;
+        // height: 330px;
       }
 
       @include small-mobile {
-        height: 366px;
+        // height: 366px;
       }
 
 
@@ -425,7 +425,7 @@
         position: relative;
         z-index: 1;
         display: block;
-        padding-top: calc(100% - 6px);
+        padding-top: calc(100% - -9px);
         border: 3px solid transparent;
         box-sizing: border-box;
         transition: background-color .3s ease, border-color .3s ease;

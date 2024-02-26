@@ -111,7 +111,7 @@
           left: 48px;
 
           @include small-tablet {
-            top: 29%;
+            top: 47%;
           }
 
           @include small-mobile {
@@ -128,7 +128,7 @@
           }
 
           @include small-tablet {
-            top: 29%;
+            top: 47%;
           }
 
           @include small-mobile {
@@ -213,6 +213,8 @@
 
       @include media(1600px) {
         max-width: 1200px;
+        padding-left: 49px;
+        padding-right: 49px;
       }
 
       @include tablet-one {
@@ -221,6 +223,7 @@
 
       @include small-tablet {
         max-width: 562px;
+        // padding: 0;
       }
 
       @include small-mobile {

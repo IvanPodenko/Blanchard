@@ -96,6 +96,9 @@
   }
 
   &__list {
+    height: auto;
+    display: flex;
+    flex-direction: column;
     border: 1px solid var(--very-light-grey);
     box-sizing: border-box;
 
@@ -126,7 +129,8 @@
     }
 
     &-inner {
-      padding: 13px 50px 40px 50px;
+      flex-grow: 1;
+      padding: 13px 30px 40px 50px;
       display: flex;
       align-items: flex-start;
       justify-content: space-between;

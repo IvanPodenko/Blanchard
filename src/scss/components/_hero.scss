@@ -2,7 +2,7 @@
 
 
   @include tablet-one {
-    height: 668px;
+    // height: 668px;
   }
 
   @include small-mobile {
@@ -137,7 +137,7 @@
       background: var(--amethyst);
       padding: 22px 35px;
       transition: border .3s ease, background-color .3s ease, outline .3s ease ;
-      // outline: 0px  solid red;
+      outline: 0px  solid transparent;
 
       &:focus-visible:not(:hover):not(:active)  {
         outline: 2px  solid var(--wisteria);
