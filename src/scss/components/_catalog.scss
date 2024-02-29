@@ -6,6 +6,11 @@
     padding-top: 39px;
   }
 
+  @include mobile {
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
+
   &__container {
     // padding-top: 39px;
 
@@ -17,8 +22,10 @@
       padding-top: 40px;
     }
 
-    @include small-mobile {
-      padding: 22px 16px 39px 15px;
+    @include mobile {
+      padding-top: 0;
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
 
@@ -31,7 +38,7 @@
     line-height: normal;
     color: var(--black);
 
-      @include small-mobile {
+      @include mobile {
       font-size: 28px;
       line-height: 38px;
       padding-bottom: 12px;
@@ -95,7 +102,7 @@
         margin-bottom: 6px;
       }
 
-      @include small-mobile {
+      @include mobile {
         padding-top: 16px;
         margin-bottom: 6px;
       }
@@ -124,7 +131,7 @@
         margin: 0;
       }
 
-      @include small-mobile {
+      @include mobile {
         padding-top: 14px;
       }
     }
@@ -251,7 +258,7 @@
         // display: block;
         // margin-top: 43px;
 
-        @include small-mobile {
+        @include mobile {
           font-size: 18px;
           line-height: 32px;
         }
@@ -278,7 +285,7 @@
           transform: rotate(180deg);
         }
 
-        @include small-mobile {
+        @include mobile {
           width: 30px;
         }
       }
@@ -336,7 +343,7 @@
           background-color: var(--amethyst);
         }
 
-        @include small-mobile {
+        @include mobile {
           line-height: 29px;
         }
       }

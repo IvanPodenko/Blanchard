@@ -7,6 +7,11 @@
     padding-top: 0;
   }
 
+  @include mobile {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
   &__container {
 
 
@@ -14,8 +19,10 @@
       padding-top: 81px;
     }
 
-    @include small-mobile {
-      padding: 48px 16px 39px 15px;
+    @include mobile {
+      padding-top: 0;
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
 
@@ -29,7 +36,7 @@
     line-height: 65px;
     color: var(--night-rider);
 
-    @include small-mobile {
+    @include mobile {
       font-size: 28px;
       line-height: 38px;
     }
@@ -46,9 +53,9 @@
     line-height: 32px;
     color: var(--night-rider);
 
-    @include small-mobile {
+    @include mobile {
       font-size: 14px;
-     line-height: 28px;
+      line-height: 28px;
     }
   }
 }

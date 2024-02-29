@@ -11,11 +11,18 @@
     min-height: 560px;
   }
 
+  @include mobile {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
   &__container {
 
 
-    @include small-mobile {
-      padding: 47px 16px 39px 15px;
+    @include mobile {
+      padding-left: 15px;
+      padding-right: 15px;
+      // padding: 47px 16px 39px 15px;
     }
   }
 
@@ -45,7 +52,8 @@
       margin-bottom: -20px;
     }
 
-    @include small-mobile {
+    @include mobile {
+      // padding-left: 15px;
       max-width: 290px;
     }
 
@@ -59,7 +67,7 @@
       margin-top: 0;
       margin-bottom: 10px;
 
-      @include small-mobile {
+      @include mobile {
         font-size: 28px;
         line-height: 38px;
       }
@@ -288,7 +296,7 @@
       max-width: 100%;
     }
 
-    @include small-mobile {
+    @include mobile {
       display: flex;
       flex-direction: column-reverse;
       margin-top: 16px;
@@ -312,11 +320,12 @@
       @include mobile {
         align-self: center;
         margin-top: 20px;
-      }
-
-      @include small-mobile {
         margin: 0;
       }
+
+      // @include small-mobile {
+
+      // }
     }
 
     &-pagination {

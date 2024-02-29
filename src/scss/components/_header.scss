@@ -10,8 +10,8 @@
   &__top {
     background-color: var(--black);
 
-    @include small-mobile {
-      height: 45px;
+    @include mobile {
+      // height: 45px;
     }
 
     &-container {
@@ -32,7 +32,7 @@
           // top: 7%;
         }
 
-        @include small-mobile {
+        @include mobile {
           width: 25px;
           height: 18px;
         }
@@ -50,11 +50,12 @@
 
       @include mobile {
         padding: 0 15px;
-      }
-
-      @include small-mobile {
         min-height: 49px;
       }
+
+      // @include small-mobile {
+
+      // }
     }
 
     &-link {
@@ -70,7 +71,7 @@
       @include mobile {
         & {
           position: absolute;
-          left: 35%;
+          left: 40%;
           // width: 107px;
           // top: 7%;
         }
@@ -96,7 +97,7 @@
         height: 42px;
       }
 
-      @include small-mobile{
+      @include mobile{
         width: 96px;
         height: 21px;
       }
@@ -706,17 +707,20 @@
 
           @include mobile {
             & {
+              // padding-right: 15px;
+              width: 18px;
+              height: 18px;
               right: -3%;
               top: 7%;
             }
           }
 
-          @include small-mobile {
-           & {
-            width: 18px;
-            height: 18px;
-           }
-          }
+          // @include small-mobile {
+          //  & {
+          //   width: 18px;
+          //   height: 18px;
+          //  }
+          // }
         }
       }
 

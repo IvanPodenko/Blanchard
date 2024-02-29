@@ -10,15 +10,18 @@
     padding-top: 80px;
   }
 
-  @include small-mobile {
+  @include mobile {
     padding-top: 0;
+    padding-top: 25px;
+    padding-bottom: 50px;
   }
 
   &__container {
     position: relative;
 
-    @include small-mobile {
-      padding: 9px 16px 26px 16px;
+    @include mobile {
+      padding-right: 15px;
+      padding-left: 15px;
     }
   }
 
