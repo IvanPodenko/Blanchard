@@ -7,9 +7,10 @@
     margin-bottom: 55px;
   }
 
-  @include small-mobile {
-    padding-top: 0;
-    margin-bottom: -68px;
+  @include mobile {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 0;
   }
 
 
@@ -19,8 +20,10 @@
       padding-top: 30px;
     }
 
-    @include small-mobile {
-      padding: 0 16px 39px 14px;
+    @include mobile {
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 0;
     }
   }
 
@@ -36,13 +39,14 @@
     @include tablet-one {
       margin: 0;
       margin-bottom: 18px;
-      padding-top: 37px;
+      // padding-top: 37px;
     }
 
-    @include small-mobile {
+    @include mobile {
+      padding-top: 0;
       font-size: 28px;
       line-height: 38px;
-      margin-bottom: 38px;
+      margin-bottom: 12px;
     }
   }
 
@@ -79,10 +83,10 @@
         margin-top: 27px;
       }
 
-      @include small-mobile {
+      @include mobile {
         font-size: 18px;
         line-height: 32px;
-        margin-bottom: -29px;
+        // margin-bottom: -29px;
         margin-top: 52px;
       }
     }
@@ -95,6 +99,32 @@
       max-width: 1450px;
       height: 150px;
       // padding: 0 50px;
+
+
+      @include media(1600px) {
+        max-width: 1200px;
+        padding-left: 49px;
+        padding-right: 49px;
+      }
+
+      @include tablet-one {
+        height: 128px;
+        max-width: 818px;
+      }
+
+      @include small-tablet {
+        height: 114px;
+        max-width: 562px;
+      }
+
+      @include small-mobile {
+        height: 65px;
+        // max-width: 190px;
+      }
+
+
+
+
 
       &-button {
         display: flex;
@@ -111,11 +141,11 @@
           left: 48px;
 
           @include small-tablet {
-            top: 47%;
+            top: 57%;
           }
 
-          @include small-mobile {
-            top: 12%;
+          @include mobile {
+            top: 57%;
             left: 4%;
           }
         }
@@ -128,12 +158,12 @@
           }
 
           @include small-tablet {
-            top: 47%;
+            top: 57%;
           }
 
-          @include small-mobile {
+          @include mobile {
             right: 4%;
-            top: 12%;
+            top: 57%;
           }
         }
 
@@ -180,18 +210,6 @@
         &:active {
           border-color: var( --amethyst);
         }
-
-        @include tablet-one {
-          height: 128px;
-        }
-
-        @include small-tablet {
-          height: 114px;
-        }
-
-        @include small-mobile {
-          height: 65px;
-        }
       }
 
       &-image {
@@ -211,32 +229,16 @@
         }
       }
 
-      @include media(1600px) {
-        max-width: 1200px;
-        padding-left: 49px;
-        padding-right: 49px;
-      }
-
-      @include tablet-one {
-        max-width: 818px;
-      }
-
-      @include small-tablet {
-        max-width: 562px;
-        // padding: 0;
-      }
-
-      @include small-mobile {
-        max-width: 190px;
-      }
-
-
-
     }
 
     & .projects__swiper-container {
       position: relative;
       // max-width: 1450px;
+
+      @include mobile {
+        padding-right: 15px;
+        padding-left: 15px;
+      }
     }
 
     &__tooltip {
