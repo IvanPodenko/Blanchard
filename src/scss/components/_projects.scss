@@ -1,10 +1,10 @@
 .projects {
 
-  padding-top: 13px;
+  padding-top: 42px;
   margin-bottom: 77px;
 
   @include tablet-one {
-    margin-bottom: 55px;
+    margin-bottom: 79px;
   }
 
   @include mobile {
@@ -17,7 +17,7 @@
   &__container {
 
     @include tablet-one {
-      padding-top: 30px;
+      padding-top: 39px;
     }
 
     @include mobile {
@@ -29,6 +29,8 @@
 
 
   &__title {
+    margin: 0;
+    margin-bottom: 14px;
     color: var(--night-rider);
     font-family: Open Sans;
     font-size: 48px;
@@ -71,7 +73,7 @@
   }
 
   &__subtitle {
-    margin-top: 0;
+    margin-top: -6px;
     color: var(--night-rider);
     font-family: Open Sans;
     font-size: 24px;
@@ -79,8 +81,12 @@
     font-weight: 600;
     line-height: 32px;
 
+    @include tablet-one {
+      margin-top: 0;
+    }
+
       @include small-tablet {
-        margin-top: 27px;
+        margin-top: 26px;
       }
 
       @include mobile {
@@ -109,12 +115,12 @@
 
       @include tablet-one {
         height: 128px;
-        max-width: 818px;
+        max-width: 914px;
       }
 
       @include small-tablet {
-        height: 114px;
-        max-width: 562px;
+        height: 110px;
+        max-width: 647px;
       }
 
       @include small-mobile {

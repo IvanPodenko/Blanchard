@@ -9,8 +9,10 @@
     padding-bottom: 39px;
   }
 
-  @include small-mobile {
-    height: 132px;
+  @include mobile {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    // height: 132px;
   }
 
     &__container {
@@ -19,7 +21,7 @@
       // height: 140px;
       align-items: center;
 
-      @include small-mobile {
+      @include mobile {
         flex-direction: column-reverse;
       }
     }
@@ -29,10 +31,11 @@
       flex-shrink: 0;
       margin-right: 30px;
 
-      @include small-mobile {
+      @include mobile {
+        margin-right: 0;
         // width: 96px;
-        padding-bottom: 18px;
-        margin-bottom: 10px;
+        // padding-bottom: 18px;
+        // margin-bottom: 10px;
       }
     }
 
@@ -41,8 +44,8 @@
     gap: 20px;
     flex-wrap: wrap;
 
-    @include small-mobile {
-      padding-top: 20px;
+    @include mobile {
+      margin-bottom: 20px;
     }
   }
 

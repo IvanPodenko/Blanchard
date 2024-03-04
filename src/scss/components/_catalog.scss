@@ -96,9 +96,13 @@
       color: var(--black);
       margin-bottom: 7px;
 
+      @include tablet-one {
+        margin-top: 28px;
+      }
+
       @include small-tablet {
         margin: 0;
-        padding-top: 17px;
+        padding-top: 25px;
         margin-bottom: 6px;
       }
 

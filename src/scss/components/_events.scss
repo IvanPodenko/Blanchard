@@ -1,5 +1,5 @@
 .events {
-  padding-top: 40px;
+  padding-top: 50px;
 
 
   @include tablet-one {
@@ -7,7 +7,7 @@
   }
 
   @include small-tablet {
-    padding-top: 80px;
+    padding-top: 39px;
   }
 
   @include mobile {
@@ -137,7 +137,7 @@
 
     &-inner {
       flex-grow: 1;
-      padding: 13px 30px 40px 50px;
+      padding: 6px 53px 40px 50px;
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
@@ -208,6 +208,10 @@
       @include tablet-one {
         margin-bottom: 22px;
         // padding-right: 33px;
+      }
+
+      @include small-tablet {
+        margin-bottom: 56px;
       }
 
       @include small-mobile {

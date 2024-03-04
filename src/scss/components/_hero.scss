@@ -155,22 +155,12 @@
       transition: border .3s ease, background-color .3s ease, outline .3s ease ;
       outline: 0px  solid transparent;
 
-      &:focus-visible:not(:hover):not(:active)  {
-        outline: 2px  solid var(--wisteria);
-        outline-offset: 5px;
-      }
-
-      &:hover{
-        outline: 3px solid var(--mauve);
-      }
-
-      &:active {
-        border: 3px solid var(--mauve);
-        background-color: var(--studio);
-      }
-
       @include tablet-one {
         margin-top: 44px;
+      }
+
+      @include small-tablet {
+        margin-top: 15px;
       }
 
       @include mobile {
@@ -186,6 +176,21 @@
       //   padding-top: 7px;
       //   padding-bottom: 9px;
       // }
+
+      &:focus-visible:not(:hover):not(:active)  {
+        outline: 2px  solid var(--wisteria);
+        outline-offset: 5px;
+      }
+
+      &:hover{
+        outline: 3px solid var(--mauve);
+      }
+
+      &:active {
+        border: 3px solid var(--mauve);
+        background-color: var(--studio);
+      }
+
     }
 
   }
