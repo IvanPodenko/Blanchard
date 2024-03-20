@@ -29,33 +29,13 @@ const swiperEvents = new Swiper('.events__wrapper', {
         spaceBetween: 27
       },
 
+      1400: {
+        slidesPerView: 3,
+        spaceBetween: 50
+
+      }
+
   }
-
-  // //  320: {
-  // //     slidesPerView: 1,
-  // //     spaceBetween: 20
-  // //   },
-
-  //   576: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 38
-  //   },
-
-  //   768: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 38
-  //   },
-
-  //   1024: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 34
-  //   },
-
-  //   1200: {
-  //     slidesPerView: 3,
-  //     spaceBetween: 50
-  //   }
-  // },
 
 });
 

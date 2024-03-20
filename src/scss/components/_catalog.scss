@@ -94,7 +94,8 @@
       font-weight: 600;
       line-height: normal;
       color: var(--black);
-      margin-bottom: 7px;
+      margin-bottom: 4px;
+      padding-top: 4px;
 
       @include tablet-one {
         margin-top: 28px;
@@ -187,7 +188,7 @@
       border-bottom: 1px solid var(--very-light-grey);
       width: 800px;
       text-align: left;
-      min-height: 114px;
+      min-height: 115px;
       margin-bottom: -1px;
       // margin-top: -1px;
       transition: border-color .5s ease-in-out;

@@ -104,11 +104,12 @@
     }
 
     &-nav {
-      display: contents;
+      display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       flex-wrap: nowrap;
+      margin-right: 238px;
       // overflow-y: auto;
 
       @include tablet {
@@ -149,6 +150,7 @@
       &-list {
         display: flex;
         justify-content: space-between;
+        gap: 15px 62px;
         // flex-wrap: wrap;
         max-width: 991px;
         // padding-top: 37px;
@@ -191,7 +193,7 @@
 
       &-link {
         position: relative;
-        font-family: 'Open Sans';
+        // font-family: 'Open Sans';
         font-style: normal;
         font-weight: 600;
         font-size: 18px;
@@ -241,6 +243,7 @@
     &-btn {
       position: relative;
       display: flex;
+      flex-shrink: 0;
       align-items: baseline;
       color: var(--white);
       // transition: fill .3s ease-in-out;
@@ -316,7 +319,7 @@
       }
 
       &-heading {
-        font-family: 'Open Sans';
+        // font-family: 'Open Sans';
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -449,7 +452,7 @@
       }
 
       &-heading {
-        font-family: 'Open Sans';
+        // font-family: 'Open Sans';
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -531,7 +534,7 @@
         }
 
         &-link {
-          font-family: 'Open Sans';
+          // font-family: 'Open Sans';
           font-style: normal;
           font-weight: 600;
           font-size: 14px;
@@ -797,7 +800,7 @@
     }
 
     &-input::placeholder {
-      font-family: 'Open Sans';
+      // font-family: 'Open Sans';
       font-style: normal;
       font-weight: 400;
       font-size: 18px;
