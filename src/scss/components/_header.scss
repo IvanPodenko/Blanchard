@@ -50,7 +50,7 @@
 
       @include mobile {
         padding: 0 15px;
-        min-height: 49px;
+        min-height: 45px;
       }
 
       // @include small-mobile {
@@ -71,7 +71,7 @@
       @include mobile {
         & {
           position: absolute;
-          left: 40%;
+          left: 35%;
           // width: 107px;
           // top: 7%;
         }
@@ -107,9 +107,9 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: space-between;
+      // justify-content: space-between;
       flex-wrap: nowrap;
-      margin-right: 238px;
+      // margin-right: 238px;
       // overflow-y: auto;
 
       @include tablet {
@@ -149,8 +149,9 @@
 
       &-list {
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
         gap: 15px 62px;
+        margin-right: 421px;
         // flex-wrap: wrap;
         max-width: 991px;
         // padding-top: 37px;
@@ -182,6 +183,8 @@
 
       &-item {
 
+
+
       &:not(:last-child) {
         // margin-right: 68px;
 
@@ -193,7 +196,6 @@
 
       &-link {
         position: relative;
-        // font-family: 'Open Sans';
         font-style: normal;
         font-weight: 600;
         font-size: 18px;
@@ -250,6 +252,14 @@
       outline: none;
 
 
+      @include tablet {
+        padding: 22px 88px;
+        border: 2px solid var(--amethyst);
+        border-radius: 100px;
+        background: transparent;
+      }
+
+
       &::after  {
         content: "";
         position: absolute;
@@ -294,15 +304,6 @@
         fill: var(--amethyst);
       }
 
-      @include tablet {
-        padding: 22px 88px;
-        // margin-bottom: 50px;
-        border: 2px solid var(--amethyst);
-        border-radius: 100px;
-        background: transparent;
-        // margin-left: 50px;
-      }
-
       &-wrap {
         display: inline-block;
         overflow: hidden;
@@ -319,7 +320,6 @@
       }
 
       &-heading {
-        // font-family: 'Open Sans';
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -452,7 +452,6 @@
       }
 
       &-heading {
-        // font-family: 'Open Sans';
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -534,7 +533,6 @@
         }
 
         &-link {
-          // font-family: 'Open Sans';
           font-style: normal;
           font-weight: 600;
           font-size: 14px;
@@ -800,7 +798,6 @@
     }
 
     &-input::placeholder {
-      // font-family: 'Open Sans';
       font-style: normal;
       font-weight: 400;
       font-size: 18px;

@@ -6,7 +6,7 @@
   }
 
   @include mobile {
-    min-height: 309px;
+   height: 310px;
   }
 
   &__container {
@@ -64,7 +64,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-top: 25px;
+      padding-top: 30px;
       padding-right: 0;
     }
 
@@ -77,13 +77,12 @@
 
     &-title {
       margin: 0;
-      font-family: "Open Sans";
       font-style: normal;
       font-weight: 700;
       font-size: 72px;
       line-height: 98px;
       color: var(--white);
-      margin-bottom: -2px;
+      // margin-bottom: -2px;
 
       &-hidden {
         display: none;
@@ -91,7 +90,7 @@
 
       @include mobile {
         font-size: 32px;
-        line-height: 50px;
+        line-height: 45px;
         margin-bottom: 5px;
         text-align: center;
         // padding-left: 32px;
@@ -105,7 +104,6 @@
     }
 
     &-text {
-      font-family: "Open Sans";
       font-style: normal;
       font-weight: 700;
       font-size: 18px;
@@ -118,12 +116,12 @@
       @include tablet-one {
         line-height: 28px;
         margin-top: -10px;
-        margin-top: -10px;
         max-width: 661px;
       }
 
       @include mobile {
-        padding-top: 16px;
+        text-align: center;
+        padding-top: 5px;
         font-size: 12px;
         // max-width: 547px;
         margin-bottom: 10px;
@@ -142,7 +140,6 @@
 
     &-btn {
       display: inline-block;
-      font-family: "Open Sans";
       font-style: normal;
       font-weight: 700;
       font-size: 18px;
@@ -165,8 +162,8 @@
 
       @include mobile {
         font-size: 12px;
-        padding: 11px 16px 14px 19px;
-        margin-top: 10px;
+        padding: 6px 19px 11px 20px;
+        margin-top: 31px;
         // padding-top: 7px;
         // padding-bottom: 9px;
       }

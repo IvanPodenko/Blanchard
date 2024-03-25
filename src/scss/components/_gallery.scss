@@ -17,6 +17,7 @@
   }
 
   @include mobile {
+    height: 800px;
     padding-top: 50px;
     padding-bottom: 50px;
   }
@@ -63,7 +64,6 @@
     }
 
     &-title {
-      font-family: "Open Sans";
       font-style: normal;
       font-weight: 400;
       font-size: 48px;
@@ -73,6 +73,7 @@
       margin-bottom: 10px;
 
       @include mobile {
+        margin-bottom: 9px;
         font-size: 28px;
         line-height: 38px;
       }
@@ -81,15 +82,14 @@
     &-subtitle {
       margin: 0;
       margin-bottom: 8px;
-      // font-family: "Open Sans";
       font-style: normal;
       font-weight: 600;
       font-size: 16px;
       line-height: 37px;
       color: var(--white);
 
-      @include small-mobile {
-        margin-bottom: 6px;
+      @include mobile {
+        margin-bottom: 3px;
       }
     }
 
@@ -261,7 +261,6 @@
       }
 
       &-content {
-        font-family: "Open Sans";
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
@@ -423,7 +422,7 @@
       background-color: var(--wisteria);
 
       @include tablet-one {
-        // height: 315px;
+        min-height: 315px;
       }
 
       @include small-tablet {
