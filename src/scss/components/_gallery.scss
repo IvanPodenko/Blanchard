@@ -429,8 +429,8 @@
         // height: 330px;
       }
 
-      @include small-mobile {
-        // height: 366px;
+      @include mobile {
+        min-height: 367px;
       }
 
 

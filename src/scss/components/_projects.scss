@@ -9,7 +9,7 @@
   }
 
   @include mobile {
-    padding-top: 25px;
+    padding-top: 23px;
     padding-bottom: 25px;
     margin-bottom: 0;
   }
@@ -89,9 +89,8 @@
 
       @include mobile {
         font-size: 18px;
-        line-height: 32px;
-        // margin-bottom: -29px;
-        margin-top: 52px;
+        line-height: 19px;
+        margin-top: 57px;
       }
     }
 

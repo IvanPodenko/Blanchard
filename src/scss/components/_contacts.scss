@@ -17,6 +17,10 @@
     border-bottom: none;
   }
 
+  @include mobile {
+    padding-top: 23px;
+  }
+
 
 
   &__container {
@@ -99,8 +103,8 @@
       margin-bottom: 28px;
     }
 
-    @include small-mobile {
-     margin-bottom: 18px;
+    @include mobile {
+     margin-bottom: 16px;
     }
 
   }

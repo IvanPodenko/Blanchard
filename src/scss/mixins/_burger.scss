@@ -57,6 +57,10 @@
       top: 50%;
       transform: rotate(45deg);
       transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+
+      @include mobile {
+        width: 15px;
+      }
     }
 
     &::after {
@@ -64,6 +68,11 @@
       top: 50%;
       transform: rotate(-45deg);
       transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+
+      
+      @include mobile {
+        width: 15px;
+      }
     }
 
     .burger__line {

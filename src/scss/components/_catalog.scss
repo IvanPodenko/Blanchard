@@ -193,9 +193,9 @@
         margin-bottom: -0.5px;
       }
 
-      @include small-mobile {
+      @include mobile {
         margin-bottom: -1px;
-        min-height: 73px;
+        min-height: 74px;
       }
 
       &-one {
@@ -449,8 +449,8 @@
   &__image {
     width: 100%;
 
-    @include small-mobile{
-      height: 191px;
+    @include mobile{
+      height: 183px;
     }
   }
 
