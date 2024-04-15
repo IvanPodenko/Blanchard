@@ -8,16 +8,16 @@
   padding-bottom: 80px;
 
   @include tablet-one {
-    min-height: 560px;
+    // min-height: 560px;
   }
 
 
   @include small-tablet {
-    height: 890px;
+    // height: 890px;
   }
 
   @include mobile {
-    height: 800px;
+    // height: 800px;
     padding-top: 50px;
     padding-bottom: 50px;
   }
@@ -39,7 +39,12 @@
     justify-content: space-between;
     gap: 50px;
 
-    @include small-tablet {
+    // @include small-tablet {
+    //   flex-direction: column;
+    //   gap: 34px;
+    // }
+
+    @include media(900px) {
       flex-direction: column;
       gap: 34px;
     }
@@ -169,7 +174,7 @@
     .choices__list[aria-expanded]  {
       border: none;
       border-radius: 6px;
-      opacity: 0.5;
+      opacity: 1.5;
     }
 
     & .choices__list--dropdown .choices__item--selectable.is-highlighted,
@@ -379,6 +384,10 @@
         background-color: rgba(102,102,102, 0.5);
         border: 2px solid rgba(102,102,102, 0.5) ;
       }
+
+      @include mobile {
+        margin-top: 20px;
+      }
     }
 
     // & .btn-prev {
@@ -403,7 +412,7 @@
 
     @include small-tablet {
       width: 100%;
-      margin-bottom: 80px;
+      // margin-bottom: 80px;
     }
 
     @include mobile {
@@ -422,7 +431,7 @@
       background-color: var(--wisteria);
 
       @include tablet-one {
-        min-height: 315px;
+        // min-height: 315px;
       }
 
       @include small-tablet {
@@ -430,7 +439,7 @@
       }
 
       @include mobile {
-        min-height: 367px;
+        // min-height: 367px;
       }
 
 

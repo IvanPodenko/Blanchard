@@ -126,6 +126,11 @@
       color: var(--black);
       max-width: 750px;
 
+
+      @include tablet-one {
+        margin-top: 18px;
+      }
+
       @include small-tablet {
         padding-top: 6px;
         margin: 0;
@@ -183,7 +188,7 @@
       border-bottom: 1px solid var(--very-light-grey);
       width: 800px;
       text-align: left;
-      min-height: 115px;
+      min-height: 116px;
       margin-bottom: -1px;
       // margin-top: -1px;
       transition: border-color .5s ease-in-out;
@@ -291,8 +296,8 @@
     }
 
     &-inner {
-      padding-top: 25px;
-      padding-bottom: 49px;
+      padding-top: 32px;
+      padding-bottom: 25px;
     }
 
     &-content {
@@ -342,7 +347,7 @@
         }
 
         @include tablet-one {
-          line-height: 31px;
+          line-height: 30px;
         }
 
         @include mobile {
